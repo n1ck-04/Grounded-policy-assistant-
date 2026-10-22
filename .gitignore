@@ -1,0 +1,20 @@
+# RBI pages are not redistributed (RBI's site terms); save them yourself, see data/README.md
+data/raw/*
+!data/raw/.gitkeep
+data/corpus/
+data/cache/
+
+# Embedding model: download it, see data/README.md (133 MB, too big for git)
+models/*
+!models/.gitkeep
+
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+build/
