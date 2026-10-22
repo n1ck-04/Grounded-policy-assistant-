@@ -3,14 +3,14 @@
 Flow
     question
       -> retriever.search()               top-5 chunks
-      -> Claude, forced to call submit_answer(answer, citations[], refused)
+      -> Claude, told to call submit_answer(answer, citations[], refused)
       -> guardrails.validate()            ids real? quotes exact?
            ok   -> done
            fail -> send the problems back, one retry
            fail -> return a refusal ("couldn't verify"), never an unverified answer
 
 Why a tool call instead of free text?
-    Forcing the model to call `submit_answer` gives us structured JSON every time
+    Having the model call `submit_answer` gives us structured JSON every time
     (answer, citations, refused), so nothing has to be parsed out of prose.
 
 The `naive` mode is the baseline for the evaluation: same retrieval, a plain
@@ -81,6 +81,7 @@ class Answer:
     verified: bool = True
     attempts: int = 1
     problems: list[list[str]] = field(default_factory=list)
+    rejected: list[list[dict]] = field(default_factory=list)   # citations that failed the checks, per attempt
     input_tokens: int = 0
     output_tokens: int = 0
     seconds: float = 0.0
@@ -104,16 +105,17 @@ class ClaudeClient:
     def create(self, system: str, messages: list[dict], tools: list[dict] | None = None, max_tokens: int = 800):
         kwargs = {"model": self.model, "max_tokens": max_tokens, "system": system, "messages": messages}
         if tools:
+            # Newer Claude models don't support *forcing* a specific tool, so the prompt
+            # tells the model to always call it, and answer() handles the rare text reply.
             kwargs["tools"] = tools
-            kwargs["tool_choice"] = {"type": "tool", "name": tools[0]["name"]}
         return self.client.messages.create(**kwargs)
 
 
-def _tool_input(resp) -> dict:
+def _tool_input(resp) -> dict | None:
     for block in resp.content:
         if getattr(block, "type", None) == "tool_use":
             return dict(block.input)
-    return {"answer": "", "citations": [], "refused": False}
+    return None
 
 
 def _text(resp) -> str:
@@ -144,18 +146,24 @@ class Answerer:
             result.input_tokens += resp.usage.input_tokens
             result.output_tokens += resp.usage.output_tokens
             out = _tool_input(resp)
-            problems = validate(out, chunks)
             result.attempts = attempt
+            assistant_turn = {"role": "assistant", "content": [
+                b.model_dump(exclude_none=True) if hasattr(b, "model_dump") else b for b in resp.content]}
+            if out is None:                                   # replied in prose instead of calling the tool
+                result.problems.append(["did not call submit_answer"])
+                messages += [assistant_turn, {"role": "user", "content": "Please respond by calling submit_answer."}]
+                continue
+            problems = validate(out, chunks)
             if not problems:
                 result.answer, result.refused = out["answer"].strip(), bool(out["refused"])
                 result.citations = out.get("citations") or []
                 break
             result.problems.append(problems)
+            result.rejected.append(out.get("citations") or [])
             # Show the model what failed and let it try once more.
             tool_id = next(b.id for b in resp.content if getattr(b, "type", None) == "tool_use")
             messages += [
-                {"role": "assistant", "content": [b.model_dump(exclude_none=True) if hasattr(b, "model_dump") else b
-                                                  for b in resp.content]},
+                assistant_turn,
                 {"role": "user", "content": [{"type": "tool_result", "tool_use_id": tool_id, "is_error": True,
                                               "content": "Rejected: " + "; ".join(problems) + ". Fix and resubmit."}]},
             ]

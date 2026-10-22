@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import time
 
 from grounded import config
@@ -80,13 +81,25 @@ def gold_text(gold: list[str], blocks: list[dict]) -> str:
     return "\n\n".join(out)
 
 
-def judge(llm: ClaudeClient, question, answer_text: str, blocks: list[dict]) -> dict:
+def judge(llm: ClaudeClient, question, answer_text: str, blocks: list[dict], attempts: int = 3) -> dict:
     reference = gold_text(question.gold, blocks) if question.gold else "(The documents do not cover this question.)"
     msg = f"Question: {question.question}\n\nReference text:\n{reference}\n\nAssistant's answer:\n{answer_text}"
-    resp = llm.create(JUDGE_SYSTEM, [{"role": "user", "content": msg}], tools=[GRADE_TOOL], max_tokens=300)
-    out = next(dict(b.input) for b in resp.content if b.type == "tool_use")
-    return {"label": out["label"], "reason": out["reason"],
-            "tokens": resp.usage.input_tokens + resp.usage.output_tokens}
+    labels = GRADE_TOOL["input_schema"]["properties"]["label"]["enum"]
+    tokens = 0
+    for _ in range(attempts):
+        # Generous limit: the judge model may think before answering, and a short limit can end
+        # the reply mid-thought with no grade (this happened with 300; see DECISIONS.md).
+        resp = llm.create(JUDGE_SYSTEM, [{"role": "user", "content": msg}], tools=[GRADE_TOOL], max_tokens=2000)
+        tokens += resp.usage.input_tokens + resp.usage.output_tokens
+        out = next((dict(b.input) for b in resp.content if b.type == "tool_use"), None)
+        if out and out.get("label") in labels:
+            return {"label": out["label"], "reason": out.get("reason", ""), "tokens": tokens}
+        # The judge occasionally answers in prose; accept a clearly stated label.
+        text = " ".join(getattr(b, "text", "") for b in resp.content).lower()
+        found = [lab for lab in labels if re.search(rf"\b{lab}\b", text)]
+        if len(found) == 1:
+            return {"label": found[0], "reason": text[:200], "tokens": tokens}
+    return {"label": "ungraded", "reason": "judge returned no usable grade", "tokens": tokens}
 
 
 def score(rows: list[dict]) -> dict:
@@ -100,6 +113,7 @@ def score(rows: list[dict]) -> dict:
 
     return {
         "questions": len(rows),
+        "ungraded": sum(r["judge"] == "ungraded" for r in rows),
         "accuracy": pct([r["judge"] == "correct" for r in ans], len(ans)),
         "accuracy_incl_partial": pct([r["judge"] in ("correct", "partial") for r in ans], len(ans)),
         "fact_check_pass": pct([r["facts_ok"] for r in ans], len(ans)),
@@ -134,7 +148,7 @@ def run_system(name: str, questions, blocks, embedder, model: str | None, judge_
             "facts_ok": facts_present(a.answer, q.facts) if q.type == "answerable" else None,
             "citation_hit": any(c.covers(gl) for c in cited_chunks for gl in q.gold) if q.gold else None,
             "judge": g["label"], "judge_reason": g["reason"],
-            "verified": a.verified, "attempts": a.attempts, "problems": a.problems,
+            "verified": a.verified, "attempts": a.attempts, "problems": a.problems, "rejected": a.rejected,
             "tokens": a.input_tokens + a.output_tokens, "seconds": a.seconds,
         }
         rows.append(row)
@@ -145,6 +159,43 @@ def run_system(name: str, questions, blocks, embedder, model: str | None, judge_
             "metrics": score(rows), "rows": rows}
 
 
+def plot_summary(summary: dict, path):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    metrics = [("accuracy", "Answerable:\njudged correct"), ("abstained_on_unanswerable", "Unanswerable:\ncorrectly declined"),
+               ("answers_with_citations", "Answers with\nverified citations")]
+    names = list(summary)
+    fig, ax = plt.subplots(figsize=(7, 4))
+    width = 0.8 / len(names)
+    for i, n in enumerate(names):
+        vals = [summary[n][m] or 0 for m, _ in metrics]
+        bars = ax.bar([x + (i - (len(names) - 1) / 2) * width for x in range(len(metrics))], vals, width, label=n)
+        ax.bar_label(bars, labels=[f"{v * 100:.1f}".rstrip("0").rstrip(".") + "%" for v in vals], fontsize=8)
+    ax.set_xticks(range(len(metrics)), [label for _, label in metrics])
+    ax.set(ylim=(0, 1.3), ylabel="Share of questions", title="End-to-end results on 65 questions")
+    ax.legend(fontsize=8, loc="upper center", ncol=len(names), frameon=False)
+    fig.tight_layout()
+    fig.savefig(path, dpi=150)
+    plt.close(fig)
+
+
+def rejudge(name: str, judge_llm, blocks) -> dict:
+    """Re-grade saved answers (no new answers generated), e.g. after fixing the judge."""
+    path = config.REPORTS_DIR / f"answers_{name}.json"
+    result = json.loads(path.read_text())
+    qs = {q.id: q for q in load_testset()}
+    for row in result["rows"]:
+        g = judge(judge_llm, qs[row["id"]], row["answer"], blocks)
+        row["judge"], row["judge_reason"] = g["label"], g["reason"]
+        if row["mode"] == "naive":
+            row["refused"] = g["label"] == "abstained"
+    result["metrics"] = score(result["rows"])
+    path.write_text(json.dumps(result, indent=2, ensure_ascii=False))
+    return result["metrics"]
+
+
 def main():
     from grounded.embed import CachedEmbedder, Embedder
 
@@ -152,7 +203,16 @@ def main():
     ap.add_argument("--systems", nargs="+", default=list(SYSTEMS), choices=list(SYSTEMS))
     ap.add_argument("--model", default=None)
     ap.add_argument("--limit", type=int, default=None, help="only the first N questions (for a quick check)")
+    ap.add_argument("--rejudge", action="store_true", help="re-grade saved answers instead of generating new ones")
     args = ap.parse_args()
+
+    if args.rejudge:
+        blocks, judge_llm = load_blocks(), ClaudeClient(JUDGE_MODEL)
+        summary = {name: rejudge(name, judge_llm, blocks) for name in args.systems}
+        (config.REPORTS_DIR / "answers_summary.json").write_text(json.dumps(summary, indent=2))
+        plot_summary(summary, config.REPORTS_DIR / "answers.png")
+        print(json.dumps(summary, indent=2))
+        return
 
     questions = load_testset()[: args.limit]
     blocks = load_blocks()
@@ -170,6 +230,7 @@ def main():
         print(json.dumps({name: result["metrics"]}, indent=2))
     if args.limit is None:
         (config.REPORTS_DIR / "answers_summary.json").write_text(json.dumps(summary, indent=2))
+        plot_summary(summary, config.REPORTS_DIR / "answers.png")
 
 
 if __name__ == "__main__":

@@ -97,6 +97,7 @@ def test_answer_refuses_when_never_verifiable(clause_chunks):
     bad = {"answer": "Seven days.", "refused": False, "citations": [{"chunk_id": "nope:1", "quote": "x"}]}
     a = Answerer(BM25Retriever(clause_chunks), FakeLLM([bad, bad])).answer("cooling-off period?")
     assert a.refused and not a.verified and a.citations == []
+    assert a.rejected == [bad["citations"], bad["citations"]]       # failed quotes kept for debugging
 
 
 def test_naive_mode_returns_plain_text(clause_chunks):

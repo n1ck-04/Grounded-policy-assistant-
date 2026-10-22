@@ -8,12 +8,8 @@ Retrieval metrics (answerable questions only; unanswerable ones have no gold)
     mrr        mean reciprocal rank of the first chunk containing a gold clause
                (1.0 = always first, 0.5 = typically second, ...).
 
-Answer metrics (computed in answer_eval.py; need an API key)
-    fact accuracy       answer contains every required fact (see testset.yaml)
-    citation accuracy   at least one cited chunk contains a gold clause
-    quote validity      every quote the model cites appears in the cited chunk
-    refusal precision   of the answers that refused, how many should have
-    refusal recall      of the unanswerable questions, how many were refused
+Answer metrics are computed in answer_eval.py (needs an API key): judged accuracy,
+fact-check pass rate, correct refusals, citation hit rate, retries and cost.
 
 Run:  python -m grounded.evaluation           (retrieval ablation; free)
 """
