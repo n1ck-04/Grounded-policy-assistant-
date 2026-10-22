@@ -1,0 +1,415 @@
+# Evaluation set: 65 questions with known answers.
+#
+# Each question has:
+#   type:   answerable   -> the documents contain the answer
+#           unanswerable -> they don't; the assistant must refuse rather than guess
+#   gold:   the clause(s) that contain the answer, as doc:clause. A retrieved chunk
+#           "covers" a gold clause if it contains that clause or one of its sub-clauses.
+#   facts:  what a correct answer must say. Each inner list is one fact, written as
+#           alternative phrasings; an answer passes if it contains at least one
+#           phrasing of EVERY fact (after normalising case, commas in numbers, % etc.).
+#   kind:   lookup (same words as the document) | paraphrase (everyday words) |
+#           numeric | table (answer is in a table) | multi (needs two clauses)
+#
+# Questions were written by reading the documents, deliberately phrased the way a
+# customer or a bank employee would ask, not copied from the regulation's wording.
+
+questions:
+  # ---------------------------------------------------------------- customer_liability
+  - id: cl01
+    question: If someone breaches the bank's systems and money is stolen from my account, and I tell the bank within two days, how much of the loss do I have to bear?
+    type: answerable
+    kind: paraphrase
+    gold: [customer_liability:6]
+    facts: [[zero, "no liability", "nothing", "not liable"]]
+  - id: cl02
+    question: What is the most a BSBD account holder can lose per transaction from a third-party breach reported five working days after the bank's alert?
+    type: answerable
+    kind: table
+    gold: [customer_liability:7]
+    facts: [["5000"]]
+  - id: cl03
+    question: A customer with a credit card limit of Rs 8 lakh reports a third-party fraud six working days after being alerted. What is the maximum they can be liable for per transaction?
+    type: answerable
+    kind: table
+    gold: [customer_liability:7]
+    facts: [["25000"]]
+  - id: cl04
+    question: Within how many working days must the bank credit the disputed amount back to the customer's account after the customer reports an unauthorised transaction?
+    type: answerable
+    kind: numeric
+    gold: [customer_liability:9]
+    facts: [["10 working days", "ten working days"]]
+  - id: cl05
+    question: What is the longest a bank can take to resolve a complaint about an unauthorised electronic transaction and settle the customer's liability?
+    type: answerable
+    kind: numeric
+    gold: [customer_liability:10]
+    facts: [["90 days", "ninety days"]]
+  - id: cl06
+    question: In a dispute over an unauthorised electronic transaction, who has to prove that the customer is liable?
+    type: answerable
+    kind: paraphrase
+    gold: [customer_liability:12]
+    facts: [["bank"]]
+  - id: cl07
+    question: I gave my OTP to a caller who then emptied my account. Who bears the loss?
+    type: answerable
+    kind: paraphrase
+    gold: [customer_liability:7]
+    facts: [["entire loss", "full loss", "whole loss", "bear the loss", "bears the loss", "bear the entire", "liable for the loss"]]
+  - id: cl08
+    question: How are the working days counted when deciding a customer's liability for an unauthorised transaction?
+    type: answerable
+    kind: lookup
+    gold: [customer_liability:8]
+    facts: [["home branch"]]
+  - id: cl09
+    question: Can a bank refuse to offer electronic transactions to a customer who hasn't given a mobile number?
+    type: answerable
+    kind: paraphrase
+    gold: [customer_liability:5]
+    facts: [["atm"]]
+  - id: cl10
+    question: Which alerts must banks ask customers to register for, for electronic banking transactions?
+    type: answerable
+    kind: lookup
+    gold: [customer_liability:5]
+    facts: [["sms"]]
+  - id: cl11
+    question: While the bank sorts out an unauthorised debit on my debit card, do I lose the interest on that money?
+    type: answerable
+    kind: paraphrase
+    gold: [customer_liability:10]
+    facts: [["loss of interest", "not lose", "won't lose", "will not lose", "does not lose", "doesn't lose", "no loss"]]
+  - id: cl12
+    question: What happens to my liability if I report a third-party fraud more than seven working days after the bank alerted me?
+    type: answerable
+    kind: lookup
+    gold: [customer_liability:7, customer_liability:8]
+    facts: [["board"]]
+  - id: cl13
+    question: Which committee in a bank periodically reviews the unauthorised electronic banking transactions reported by customers?
+    type: answerable
+    kind: lookup
+    gold: [customer_liability:13]
+    facts: [["standing committee on customer service"]]
+  - id: cl14
+    question: If the fraud happened because of the bank's own negligence, does it matter how late I report it?
+    type: answerable
+    kind: paraphrase
+    gold: [customer_liability:6]
+    facts: [["zero"], ["irrespective", "regardless", "does not matter", "doesn't matter", "no matter", "whether or not"]]
+
+  # ------------------------------------------------------------------- digital_lending
+  - id: dl01
+    question: What is the minimum cooling-off period a lender must give on a digital loan?
+    type: answerable
+    kind: numeric
+    gold: [digital_lending:10]
+    facts: [["one day", "1 day"]]
+  - id: dl02
+    question: Is a loan app allowed to read my phone's contact list?
+    type: answerable
+    kind: paraphrase
+    gold: [digital_lending:12]
+    facts: [["desist", "not allowed", "cannot", "can't", "must not", "should not", "may not", "not permitted", "prohibited", "no,"]]
+  - id: dl03
+    question: Can the loan amount be paid into the lending service provider's account instead of mine?
+    type: answerable
+    kind: paraphrase
+    gold: [digital_lending:9]
+    facts: [["bank account of the borrower", "borrower's bank account", "borrower's account", "your bank account", "your own bank account", "your account"]]
+  - id: dl04
+    question: If borrower data is processed outside India, how quickly must it be brought back?
+    type: answerable
+    kind: numeric
+    gold: [digital_lending:13]
+    facts: [["24 hours"]]
+  - id: dl05
+    question: If I cancel a digital loan during the cooling-off period, can the lender keep any fee?
+    type: answerable
+    kind: lookup
+    gold: [digital_lending:10]
+    facts: [["processing fee"]]
+  - id: dl06
+    question: If my lender ignores my complaint, after how many days can I escalate it to the RBI's complaint system?
+    type: answerable
+    kind: paraphrase
+    gold: [digital_lending:11]
+    facts: [["30 days", "thirty days"]]
+  - id: dl07
+    question: What is the maximum default loss guarantee cover allowed on a loan portfolio?
+    type: answerable
+    kind: numeric
+    gold: [digital_lending:23]
+    facts: [["5 per cent", "five per cent"]]
+  - id: dl08
+    question: Within what overdue period must a lender invoke a default loss guarantee?
+    type: answerable
+    kind: numeric
+    gold: [digital_lending:26]
+    facts: [["120 days"]]
+  - id: dl09
+    question: In what forms can a lender accept a default loss guarantee?
+    type: answerable
+    kind: lookup
+    gold: [digital_lending:22]
+    facts: [["cash"], ["fixed deposit"], ["bank guarantee"]]
+  - id: dl10
+    question: Can a lender have a default loss guarantee arrangement on credit card loans?
+    type: answerable
+    kind: lookup
+    gold: [digital_lending:20]
+    facts: [["not", "no,", "cannot", "can't"]]
+  - id: dl11
+    question: Who is eligible to provide a default loss guarantee to a regulated lender?
+    type: answerable
+    kind: lookup
+    gold: [digital_lending:18]
+    facts: [["companies act", "company"]]
+  - id: dl12
+    question: When a loan app works with several lenders, does it have to show me all the matching offers?
+    type: answerable
+    kind: paraphrase
+    gold: [digital_lending:6]
+    facts: [["all"]]
+  - id: dl13
+    question: Can a digital lender increase my credit limit without me asking?
+    type: answerable
+    kind: paraphrase
+    gold: [digital_lending:7]
+    facts: [["explicit request", "explicitly request", "request"]]
+  - id: dl14
+    question: What is the minimum information a digital lender must collect to assess a borrower's creditworthiness?
+    type: answerable
+    kind: lookup
+    gold: [digital_lending:7]
+    facts: [["age"], ["occupation"], ["income"]]
+  - id: dl15
+    question: Who certifies the data on digital lending apps that a lender submits on RBI's CIMS portal?
+    type: answerable
+    kind: lookup
+    gold: [digital_lending:17]
+    facts: [["chief compliance officer"]]
+  - id: dl16
+    question: If a loan app appears in the list published on RBI's website, does that mean RBI has approved it?
+    type: answerable
+    kind: paraphrase
+    gold: [digital_lending:17]
+    facts: [["not", "no,"]]
+  - id: dl17
+    question: Can a lending service provider collect or store my fingerprint or other biometric data?
+    type: answerable
+    kind: paraphrase
+    gold: [digital_lending:13]
+    facts: [["unless", "statutory", "not", "no,"]]
+  - id: dl18
+    question: How often must lending service providers with default loss guarantee arrangements publish the portfolios covered?
+    type: answerable
+    kind: lookup
+    gold: [digital_lending:27]
+    facts: [["monthly", "every month", "each month"]]
+  - id: dl19
+    question: Are EMI conversions on a credit card covered by the Digital Lending Directions?
+    type: answerable
+    kind: lookup
+    gold: [digital_lending:29]
+    facts: [["not", "no,"]]
+  - id: dl20
+    question: Before a recovery agent contacts a borrower about a defaulted digital loan, what must the lender do?
+    type: answerable
+    kind: lookup
+    gold: [digital_lending:8]
+    facts: [["email", "e-mail", "sms"]]
+  - id: dl21
+    question: "Who pays the lending service provider's fees - me or the lender?"
+    type: answerable
+    kind: paraphrase
+    gold: [digital_lending:9]
+    facts: [["directly by the re", "paid directly", "lender pays", "re pays", "the lender", "regulated entity"]]
+
+  # ------------------------------------------------------------------------ fraud_risk
+  - id: fr01
+    question: How much time must a bank give someone to reply to a show cause notice before declaring them a fraud?
+    type: answerable
+    kind: numeric
+    gold: [fraud_risk:2.1.1.2]
+    facts: [["21 days"]]
+  - id: fr02
+    question: How often must the Board review a bank's fraud risk management policy?
+    type: answerable
+    kind: numeric
+    gold: [fraud_risk:2.1.2]
+    facts: [["three years", "3 years"]]
+  - id: fr03
+    question: Who must sit on the board committee that monitors fraud cases?
+    type: answerable
+    kind: paraphrase
+    gold: [fraud_risk:2.1.3.1]
+    facts: [["three", "3"], ["independent"]]
+  - id: fr04
+    question: Once a large account is red-flagged, how quickly must the bank report it to the RBI?
+    type: answerable
+    kind: numeric
+    gold: [fraud_risk:3.3.4, fraud_risk:4.1.3]
+    facts: [["seven days", "7 days"]]
+  - id: fr05
+    question: What is the suggested maximum time for examining early warning signal alerts?
+    type: answerable
+    kind: numeric
+    gold: [fraud_risk:3.1.3]
+    facts: [["30 days", "thirty days"]]
+  - id: fr06
+    question: How long does a bank have to decide whether a red-flagged account is a fraud?
+    type: answerable
+    kind: numeric
+    gold: [fraud_risk:4.1.5]
+    facts: [["180 days"]]
+  - id: fr07
+    question: For how long is a borrower declared a fraud barred from raising money from RBI-regulated lenders?
+    type: answerable
+    kind: numeric
+    gold: [fraud_risk:4.4.1]
+    facts: [["five years", "5 years"]]
+  - id: fr08
+    question: A private bank finds a fraud of Rs 2 crore. Which law enforcement agencies must it report it to?
+    type: answerable
+    kind: table
+    gold: [fraud_risk:5.1]
+    facts: [["sfio", "serious fraud investigation office"], ["police"]]
+  - id: fr09
+    question: From what fraud amount must a public sector bank lodge a complaint with the CBI?
+    type: answerable
+    kind: table
+    gold: [fraud_risk:5.1]
+    facts: [["6 crore"]]
+  - id: fr10
+    question: How soon after classifying a fraud must a bank file the Fraud Monitoring Return?
+    type: answerable
+    kind: numeric
+    gold: [fraud_risk:6.3.1]
+    facts: [["14 days", "fourteen days"]]
+  - id: fr11
+    question: Which fraud cases can a bank close for statistical purposes even though the police investigation or trial is still pending?
+    type: answerable
+    kind: multi
+    gold: [fraud_risk:6.4.2]
+    facts: [["1 crore"], ["three years", "3 years"]]
+  - id: fr12
+    question: Above what loan size must a commercial bank put the title documents through a periodic legal audit?
+    type: answerable
+    kind: numeric
+    gold: [fraud_risk:8.1]
+    facts: [["5 crore"]]
+  - id: fr13
+    question: What counts as the 'date of detection' of a fraud for reporting purposes?
+    type: answerable
+    kind: lookup
+    gold: [fraud_risk:8.4.2]
+    facts: [["came to light", "comes to light"]]
+  - id: fr14
+    question: How soon must a bank report a robbery at a branch to the RBI?
+    type: answerable
+    kind: numeric
+    gold: [fraud_risk:9.1]
+    facts: [["seven days", "7 days"]]
+  - id: fr15
+    question: When a forged cheque is paid, which bank reports the fraud, the paying bank or the presenting bank?
+    type: answerable
+    kind: lookup
+    gold: [fraud_risk:7.1]
+    facts: [["paying"]]
+  - id: fr16
+    question: Can a bank sell a loan account to an asset reconstruction company before it finishes the fraud investigation?
+    type: answerable
+    kind: paraphrase
+    gold: [fraud_risk:8.2]
+    facts: [["complete", "finish", "before"]]
+  - id: fr17
+    question: From what amount must public sector banks refer fraud cases to the Advisory Board for Banking and Financial Frauds?
+    type: answerable
+    kind: numeric
+    gold: [fraud_risk:4.3.2]
+    facts: [["3 crore"]]
+  - id: fr18
+    question: Who has to approve withdrawing a Fraud Monitoring Return or removing a name from it?
+    type: answerable
+    kind: lookup
+    gold: [fraud_risk:6.3.6]
+    facts: [["whole-time director", "whole time director"]]
+  - id: fr19
+    question: After a company classified as fraud is taken over under IBC by new management, do the penalties still apply to anyone?
+    type: answerable
+    kind: multi
+    gold: [fraud_risk:4.5.2, fraud_risk:4.5.3]
+    facts: [["erstwhile", "former", "previous", "old"]]
+  - id: fr20
+    question: What is the minimum rank of the official responsible for monitoring and reporting frauds in a bank?
+    type: answerable
+    kind: lookup
+    gold: [fraud_risk:2.2]
+    facts: [["general manager"]]
+
+  # ---------------------------------------------------------------------- unanswerable
+  # Topics a user might plausibly ask about that these three documents do not cover.
+  - id: un01
+    question: What is the maximum interest rate a digital lender is allowed to charge?
+    type: unanswerable
+    kind: near-miss
+    gold: []
+    facts: []
+  - id: un02
+    question: How often do banks have to update the KYC of high-risk customers?
+    type: unanswerable
+    kind: off-topic
+    gold: []
+    facts: []
+  - id: un03
+    question: What is the maximum compensation the RBI Ombudsman can award to a customer?
+    type: unanswerable
+    kind: near-miss
+    gold: []
+    facts: []
+  - id: un04
+    question: What is the daily cash withdrawal limit at ATMs?
+    type: unanswerable
+    kind: off-topic
+    gold: []
+    facts: []
+  - id: un05
+    question: What monetary penalty does the RBI impose on a bank that reports a fraud late?
+    type: unanswerable
+    kind: near-miss
+    gold: []
+    facts: []
+  - id: un06
+    question: What is the minimum credit score needed to get a digital loan?
+    type: unanswerable
+    kind: near-miss
+    gold: []
+    facts: []
+  - id: un07
+    question: What is the maximum loan amount a digital lending app can offer?
+    type: unanswerable
+    kind: near-miss
+    gold: []
+    facts: []
+  - id: un08
+    question: How long must banks keep CCTV footage from their ATMs?
+    type: unanswerable
+    kind: off-topic
+    gold: []
+    facts: []
+  - id: un09
+    question: How much of my deposit is insured by DICGC if my bank fails?
+    type: unanswerable
+    kind: off-topic
+    gold: []
+    facts: []
+  - id: un10
+    question: What is the current repo rate set by the RBI?
+    type: unanswerable
+    kind: off-topic
+    gold: []
+    facts: []
