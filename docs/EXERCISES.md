@@ -34,7 +34,7 @@ Save one more RBI page (e.g. the Credit Card and Debit Card Master Direction) in
 2. Write 5 new test questions for it, with gold clauses and facts.
 3. Did adding a document make retrieval worse for the *existing* questions? More documents means more competition for the top 5.
 
-## 5. Measure the judge (1 h, 💳)
+## 5. Measure the judge (1 h, free)
 
 The LLM judge marks answers correct/partial/incorrect. How far can it be trusted?
 
