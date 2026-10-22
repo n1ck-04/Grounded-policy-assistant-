@@ -1,0 +1,5090 @@
+{
+  "fixed/bm25": {
+    "recall@5": 0.909,
+    "hit@1": 0.673,
+    "mrr": 0.772,
+    "recall_by_kind": {
+      "lookup": 0.824,
+      "multi": 1.0,
+      "numeric": 0.938,
+      "paraphrase": 0.938,
+      "table": 1.0
+    },
+    "avg_context_words": 1030,
+    "misses": [
+      "cl06",
+      "dl11",
+      "dl18",
+      "fr10",
+      "fr18"
+    ],
+    "rows": [
+      {
+        "id": "cl01",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability#w9",
+          "customer_liability#w5",
+          "customer_liability#w7",
+          "customer_liability#w14",
+          "customer_liability#w13"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl02",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w5",
+          "customer_liability#w6",
+          "customer_liability#w8",
+          "customer_liability#w7",
+          "fraud_risk#w14"
+        ],
+        "context_words": 1056
+      },
+      {
+        "id": "cl03",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w6",
+          "customer_liability#w7",
+          "customer_liability#w5",
+          "customer_liability#w8",
+          "customer_liability#w9"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability#w5",
+          "customer_liability#w8",
+          "customer_liability#w7",
+          "customer_liability#w6",
+          "customer_liability#w9"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w9",
+          "customer_liability#w4",
+          "customer_liability#w8",
+          "customer_liability#w5",
+          "customer_liability#w7"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl06",
+        "kind": "paraphrase",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "customer_liability#w5",
+          "customer_liability#w13",
+          "customer_liability#w8",
+          "customer_liability#w4",
+          "customer_liability#w6"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl07",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "digital_lending#w32",
+          "customer_liability#w13",
+          "customer_liability#w5",
+          "customer_liability#w14",
+          "customer_liability#w9"
+        ],
+        "context_words": 1053
+      },
+      {
+        "id": "cl08",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w8",
+          "customer_liability#w5",
+          "customer_liability#w7",
+          "customer_liability#w6",
+          "customer_liability#w9"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl09",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w4",
+          "customer_liability#w11",
+          "customer_liability#w8",
+          "customer_liability#w1",
+          "customer_liability#w2"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w2",
+          "customer_liability#w3",
+          "customer_liability#w4",
+          "customer_liability#w10",
+          "customer_liability#w1"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl11",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w9",
+          "customer_liability#w14",
+          "customer_liability#w12",
+          "customer_liability#w11",
+          "digital_lending#w29"
+        ],
+        "context_words": 1053
+      },
+      {
+        "id": "cl12",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w7",
+          "customer_liability#w8",
+          "customer_liability#w5",
+          "customer_liability#w6",
+          "fraud_risk#w14"
+        ],
+        "context_words": 1056
+      },
+      {
+        "id": "cl13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w11",
+          "customer_liability#w3",
+          "customer_liability#w10",
+          "customer_liability#w2",
+          "fraud_risk#w6"
+        ],
+        "context_words": 1056
+      },
+      {
+        "id": "cl14",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w13",
+          "customer_liability#w4",
+          "digital_lending#w19",
+          "customer_liability#w9",
+          "customer_liability#w8"
+        ],
+        "context_words": 1049
+      },
+      {
+        "id": "dl01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w13",
+          "digital_lending#w12",
+          "digital_lending#w34",
+          "fraud_risk#w17",
+          "customer_liability#w3"
+        ],
+        "context_words": 1035
+      },
+      {
+        "id": "dl02",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w15",
+          "digital_lending#w31",
+          "digital_lending#w13",
+          "digital_lending#w30",
+          "digital_lending#w17"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.25,
+        "retrieved": [
+          "digital_lending#w4",
+          "digital_lending#w23",
+          "digital_lending#w22",
+          "digital_lending#w12",
+          "digital_lending#w11"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w17",
+          "digital_lending#w14",
+          "digital_lending#w15",
+          "fraud_risk#w2",
+          "digital_lending#w16"
+        ],
+        "context_words": 1028
+      },
+      {
+        "id": "dl05",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w13",
+          "digital_lending#w12",
+          "digital_lending#w7",
+          "digital_lending#w34",
+          "fraud_risk#w17"
+        ],
+        "context_words": 1028
+      },
+      {
+        "id": "dl06",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w14",
+          "customer_liability#w9",
+          "customer_liability#w4",
+          "digital_lending#w13",
+          "customer_liability#w8"
+        ],
+        "context_words": 1046
+      },
+      {
+        "id": "dl07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending#w33",
+          "digital_lending#w25",
+          "digital_lending#w3",
+          "digital_lending#w4",
+          "digital_lending#w32"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl08",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w27",
+          "digital_lending#w3",
+          "digital_lending#w35",
+          "digital_lending#w28",
+          "digital_lending#w34"
+        ],
+        "context_words": 903
+      },
+      {
+        "id": "dl09",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w25",
+          "digital_lending#w3",
+          "digital_lending#w35",
+          "digital_lending#w24",
+          "digital_lending#w4"
+        ],
+        "context_words": 903
+      },
+      {
+        "id": "dl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "digital_lending#w3",
+          "digital_lending#w35",
+          "digital_lending#w24",
+          "digital_lending#w23",
+          "digital_lending#w28"
+        ],
+        "context_words": 903
+      },
+      {
+        "id": "dl11",
+        "kind": "lookup",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "digital_lending#w3",
+          "digital_lending#w35",
+          "digital_lending#w4",
+          "digital_lending#w7",
+          "customer_liability#w15"
+        ],
+        "context_words": 796
+      },
+      {
+        "id": "dl12",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w7",
+          "digital_lending#w31",
+          "fraud_risk#w25",
+          "digital_lending#w8",
+          "digital_lending#w30"
+        ],
+        "context_words": 1028
+      },
+      {
+        "id": "dl13",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w8",
+          "digital_lending#w9",
+          "fraud_risk#w12",
+          "digital_lending#w20",
+          "digital_lending#w32"
+        ],
+        "context_words": 1028
+      },
+      {
+        "id": "dl14",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w8",
+          "customer_liability#w2",
+          "digital_lending#w15",
+          "digital_lending#w20",
+          "digital_lending#w7"
+        ],
+        "context_words": 1032
+      },
+      {
+        "id": "dl15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w20",
+          "digital_lending#w19",
+          "digital_lending#w21",
+          "digital_lending#w30",
+          "digital_lending#w1"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending#w31",
+          "digital_lending#w21",
+          "digital_lending#w30",
+          "digital_lending#w19",
+          "digital_lending#w10"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl17",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w17",
+          "digital_lending#w16",
+          "digital_lending#w4",
+          "digital_lending#w15",
+          "digital_lending#w30"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl18",
+        "kind": "lookup",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "digital_lending#w4",
+          "digital_lending#w23",
+          "digital_lending#w24",
+          "fraud_risk#w15",
+          "digital_lending#w3"
+        ],
+        "context_words": 1028
+      },
+      {
+        "id": "dl19",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w29",
+          "digital_lending#w28",
+          "digital_lending#w23",
+          "digital_lending#w24",
+          "digital_lending#w4"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w10",
+          "digital_lending#w11",
+          "digital_lending#w20",
+          "digital_lending#w7",
+          "digital_lending#w5"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl21",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "digital_lending#w22",
+          "digital_lending#w4",
+          "digital_lending#w12",
+          "fraud_risk#w14",
+          "fraud_risk#w15"
+        ],
+        "context_words": 1031
+      },
+      {
+        "id": "fr01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w4",
+          "customer_liability#w3",
+          "fraud_risk#w5",
+          "fraud_risk#w6",
+          "fraud_risk#w13"
+        ],
+        "context_words": 1044
+      },
+      {
+        "id": "fr02",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w6",
+          "fraud_risk#w5",
+          "customer_liability#w7",
+          "fraud_risk#w4",
+          "fraud_risk#w8"
+        ],
+        "context_words": 1044
+      },
+      {
+        "id": "fr03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w5",
+          "fraud_risk#w6",
+          "fraud_risk#w7",
+          "fraud_risk#w26",
+          "customer_liability#w11"
+        ],
+        "context_words": 1044
+      },
+      {
+        "id": "fr04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w13",
+          "fraud_risk#w10",
+          "fraud_risk#w12",
+          "fraud_risk#w14",
+          "fraud_risk#w7"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.2,
+        "retrieved": [
+          "fraud_risk#w7",
+          "customer_liability#w3",
+          "customer_liability#w2",
+          "customer_liability#w6",
+          "fraud_risk#w8"
+        ],
+        "context_words": 1052
+      },
+      {
+        "id": "fr06",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w13",
+          "fraud_risk#w10",
+          "fraud_risk#w14",
+          "fraud_risk#w12",
+          "fraud_risk#w7"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending#w7",
+          "fraud_risk#w16",
+          "digital_lending#w11",
+          "fraud_risk#w25",
+          "digital_lending#w1"
+        ],
+        "context_words": 1031
+      },
+      {
+        "id": "fr08",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w18",
+          "customer_liability#w7",
+          "fraud_risk#w24",
+          "fraud_risk#w3",
+          "fraud_risk#w4"
+        ],
+        "context_words": 1044
+      },
+      {
+        "id": "fr09",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending#w14",
+          "fraud_risk#w18",
+          "fraud_risk#w19",
+          "customer_liability#w4",
+          "customer_liability#w7"
+        ],
+        "context_words": 1045
+      },
+      {
+        "id": "fr10",
+        "kind": "numeric",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "fraud_risk#w18",
+          "customer_liability#w3",
+          "fraud_risk#w13",
+          "fraud_risk#w27",
+          "fraud_risk#w19"
+        ],
+        "context_words": 1044
+      },
+      {
+        "id": "fr11",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w22",
+          "fraud_risk#w23",
+          "fraud_risk#w18",
+          "fraud_risk#w19",
+          "customer_liability#w9"
+        ],
+        "context_words": 1044
+      },
+      {
+        "id": "fr12",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w24",
+          "fraud_risk#w25",
+          "fraud_risk#w26",
+          "fraud_risk#w2",
+          "fraud_risk#w6"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w26",
+          "fraud_risk#w22",
+          "fraud_risk#w11",
+          "digital_lending#w8",
+          "fraud_risk#w4"
+        ],
+        "context_words": 1037
+      },
+      {
+        "id": "fr14",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w27",
+          "customer_liability#w3",
+          "customer_liability#w4",
+          "customer_liability#w8",
+          "customer_liability#w7"
+        ],
+        "context_words": 1056
+      },
+      {
+        "id": "fr15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w23",
+          "fraud_risk#w24",
+          "digital_lending#w12",
+          "customer_liability#w5",
+          "customer_liability#w6"
+        ],
+        "context_words": 1045
+      },
+      {
+        "id": "fr16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w25",
+          "fraud_risk#w24",
+          "fraud_risk#w13",
+          "digital_lending#w26",
+          "digital_lending#w11"
+        ],
+        "context_words": 1034
+      },
+      {
+        "id": "fr17",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w16",
+          "fraud_risk#w15",
+          "fraud_risk#w21",
+          "fraud_risk#w18",
+          "fraud_risk#w5"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr18",
+        "kind": "lookup",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "fraud_risk#w19",
+          "fraud_risk#w27",
+          "fraud_risk#w18",
+          "digital_lending#w30",
+          "digital_lending#w31"
+        ],
+        "context_words": 1034
+      },
+      {
+        "id": "fr19",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w17",
+          "fraud_risk#w18",
+          "fraud_risk#w2",
+          "fraud_risk#w16",
+          "digital_lending#w24"
+        ],
+        "context_words": 1037
+      },
+      {
+        "id": "fr20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w7",
+          "fraud_risk#w6",
+          "fraud_risk#w22",
+          "fraud_risk#w5",
+          "fraud_risk#w18"
+        ],
+        "context_words": 1040
+      }
+    ],
+    "chunks": 81,
+    "ms_per_query": 0.5
+  },
+  "fixed/dense": {
+    "recall@5": 0.973,
+    "hit@1": 0.727,
+    "mrr": 0.825,
+    "recall_by_kind": {
+      "lookup": 1.0,
+      "multi": 1.0,
+      "numeric": 0.906,
+      "paraphrase": 1.0,
+      "table": 1.0
+    },
+    "avg_context_words": 1035,
+    "misses": [
+      "fr04",
+      "fr10"
+    ],
+    "rows": [
+      {
+        "id": "cl01",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability#w8",
+          "customer_liability#w5",
+          "customer_liability#w13",
+          "customer_liability#w7",
+          "customer_liability#w9"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl02",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w6",
+          "fraud_risk#w14",
+          "customer_liability#w5",
+          "customer_liability#w7",
+          "customer_liability#w8"
+        ],
+        "context_words": 1056
+      },
+      {
+        "id": "cl03",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w7",
+          "customer_liability#w6",
+          "customer_liability#w8",
+          "customer_liability#w5",
+          "customer_liability#w9"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w8",
+          "customer_liability#w9",
+          "customer_liability#w6",
+          "customer_liability#w7",
+          "customer_liability#w5"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w9",
+          "customer_liability#w6",
+          "customer_liability#w8",
+          "customer_liability#w7",
+          "customer_liability#w1"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl06",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w11",
+          "customer_liability#w8",
+          "customer_liability#w10",
+          "customer_liability#w6",
+          "customer_liability#w9"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl07",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.25,
+        "retrieved": [
+          "customer_liability#w13",
+          "fraud_risk#w14",
+          "customer_liability#w4",
+          "customer_liability#w5",
+          "digital_lending#w15"
+        ],
+        "context_words": 1049
+      },
+      {
+        "id": "cl08",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w8",
+          "customer_liability#w9",
+          "customer_liability#w7",
+          "customer_liability#w6",
+          "customer_liability#w5"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl09",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w4",
+          "customer_liability#w1",
+          "customer_liability#w6",
+          "customer_liability#w3",
+          "customer_liability#w2"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w2",
+          "customer_liability#w3",
+          "customer_liability#w4",
+          "customer_liability#w13",
+          "fraud_risk#w10"
+        ],
+        "context_words": 1056
+      },
+      {
+        "id": "cl11",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability#w14",
+          "customer_liability#w9",
+          "customer_liability#w13",
+          "customer_liability#w15",
+          "customer_liability#w1"
+        ],
+        "context_words": 946
+      },
+      {
+        "id": "cl12",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w7",
+          "customer_liability#w8",
+          "customer_liability#w6",
+          "customer_liability#w5",
+          "fraud_risk#w14"
+        ],
+        "context_words": 1056
+      },
+      {
+        "id": "cl13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w11",
+          "customer_liability#w1",
+          "customer_liability#w4",
+          "customer_liability#w6",
+          "customer_liability#w8"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl14",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.2,
+        "retrieved": [
+          "fraud_risk#w26",
+          "fraud_risk#w21",
+          "fraud_risk#w12",
+          "fraud_risk#w14",
+          "customer_liability#w5"
+        ],
+        "context_words": 1044
+      },
+      {
+        "id": "dl01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w13",
+          "digital_lending#w12",
+          "digital_lending#w32",
+          "digital_lending#w34",
+          "digital_lending#w9"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl02",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w15",
+          "digital_lending#w8",
+          "digital_lending#w18",
+          "digital_lending#w10",
+          "customer_liability#w3"
+        ],
+        "context_words": 1032
+      },
+      {
+        "id": "dl03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w11",
+          "digital_lending#w12",
+          "digital_lending#w5",
+          "digital_lending#w7",
+          "digital_lending#w4"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w16",
+          "digital_lending#w15",
+          "digital_lending#w17",
+          "digital_lending#w11",
+          "digital_lending#w9"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl05",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w13",
+          "digital_lending#w12",
+          "digital_lending#w32",
+          "fraud_risk#w17",
+          "digital_lending#w27"
+        ],
+        "context_words": 1028
+      },
+      {
+        "id": "dl06",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w14",
+          "digital_lending#w13",
+          "fraud_risk#w5",
+          "customer_liability#w9",
+          "customer_liability#w8"
+        ],
+        "context_words": 1042
+      },
+      {
+        "id": "dl07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w25",
+          "digital_lending#w33",
+          "digital_lending#w32",
+          "digital_lending#w26",
+          "digital_lending#w27"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl08",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w27",
+          "digital_lending#w22",
+          "digital_lending#w13",
+          "digital_lending#w21",
+          "digital_lending#w3"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl09",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "digital_lending#w4",
+          "digital_lending#w11",
+          "digital_lending#w25",
+          "digital_lending#w10",
+          "digital_lending#w3"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w24",
+          "digital_lending#w23",
+          "digital_lending#w11",
+          "digital_lending#w22",
+          "digital_lending#w4"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl11",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w22",
+          "digital_lending#w4",
+          "digital_lending#w5",
+          "digital_lending#w3",
+          "digital_lending#w27"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl12",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w7",
+          "digital_lending#w8",
+          "digital_lending#w31",
+          "digital_lending#w4",
+          "digital_lending#w1"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl13",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w9",
+          "digital_lending#w8",
+          "digital_lending#w7",
+          "digital_lending#w13",
+          "digital_lending#w4"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl14",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w8",
+          "digital_lending#w15",
+          "digital_lending#w18",
+          "digital_lending#w16",
+          "digital_lending#w9"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w20",
+          "digital_lending#w21",
+          "digital_lending#w19",
+          "digital_lending#w18",
+          "digital_lending#w10"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending#w31",
+          "digital_lending#w21",
+          "digital_lending#w8",
+          "digital_lending#w10",
+          "digital_lending#w19"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl17",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w17",
+          "digital_lending#w16",
+          "digital_lending#w15",
+          "digital_lending#w1",
+          "digital_lending#w8"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl18",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.2,
+        "retrieved": [
+          "digital_lending#w25",
+          "digital_lending#w22",
+          "digital_lending#w21",
+          "digital_lending#w4",
+          "digital_lending#w27"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl19",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w29",
+          "digital_lending#w23",
+          "digital_lending#w7",
+          "digital_lending#w30",
+          "digital_lending#w4"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w10",
+          "digital_lending#w11",
+          "digital_lending#w5",
+          "digital_lending#w15",
+          "digital_lending#w4"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl21",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w11",
+          "digital_lending#w4",
+          "digital_lending#w7",
+          "digital_lending#w12",
+          "digital_lending#w13"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "fr01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w5",
+          "fraud_risk#w14",
+          "customer_liability#w4",
+          "customer_liability#w6",
+          "customer_liability#w8"
+        ],
+        "context_words": 1052
+      },
+      {
+        "id": "fr02",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w6",
+          "fraud_risk#w5",
+          "fraud_risk#w4",
+          "fraud_risk#w26",
+          "fraud_risk#w7"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w6",
+          "fraud_risk#w5",
+          "fraud_risk#w7",
+          "fraud_risk#w4",
+          "fraud_risk#w16"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr04",
+        "kind": "numeric",
+        "recall": 0.5,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w14",
+          "fraud_risk#w13",
+          "fraud_risk#w12",
+          "fraud_risk#w21",
+          "fraud_risk#w24"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "customer_liability#w3",
+          "fraud_risk#w5",
+          "fraud_risk#w8",
+          "fraud_risk#w10",
+          "fraud_risk#w26"
+        ],
+        "context_words": 1044
+      },
+      {
+        "id": "fr06",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w14",
+          "fraud_risk#w13",
+          "fraud_risk#w12",
+          "fraud_risk#w5",
+          "fraud_risk#w23"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.2,
+        "retrieved": [
+          "fraud_risk#w14",
+          "fraud_risk#w21",
+          "fraud_risk#w13",
+          "fraud_risk#w23",
+          "fraud_risk#w17"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr08",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w19",
+          "fraud_risk#w18",
+          "fraud_risk#w14",
+          "fraud_risk#w23",
+          "fraud_risk#w24"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr09",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w19",
+          "fraud_risk#w30",
+          "fraud_risk#w31",
+          "fraud_risk#w24",
+          "fraud_risk#w21"
+        ],
+        "context_words": 922
+      },
+      {
+        "id": "fr10",
+        "kind": "numeric",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "fraud_risk#w14",
+          "fraud_risk#w27",
+          "fraud_risk#w13",
+          "fraud_risk#w26",
+          "fraud_risk#w24"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr11",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w14",
+          "fraud_risk#w23",
+          "fraud_risk#w22",
+          "fraud_risk#w12",
+          "fraud_risk#w27"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr12",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w25",
+          "fraud_risk#w24",
+          "fraud_risk#w12",
+          "fraud_risk#w23",
+          "digital_lending#w9"
+        ],
+        "context_words": 1037
+      },
+      {
+        "id": "fr13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w26",
+          "fraud_risk#w27",
+          "fraud_risk#w19",
+          "fraud_risk#w14",
+          "fraud_risk#w20"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr14",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w27",
+          "fraud_risk#w13",
+          "fraud_risk#w24",
+          "fraud_risk#w21",
+          "fraud_risk#w5"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w24",
+          "fraud_risk#w23",
+          "fraud_risk#w19",
+          "fraud_risk#w20",
+          "fraud_risk#w12"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "fraud_risk#w24",
+          "fraud_risk#w14",
+          "fraud_risk#w25",
+          "fraud_risk#w12",
+          "fraud_risk#w17"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr17",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w16",
+          "fraud_risk#w19",
+          "fraud_risk#w6",
+          "fraud_risk#w7",
+          "fraud_risk#w30"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr18",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w22",
+          "fraud_risk#w14",
+          "fraud_risk#w24",
+          "fraud_risk#w20",
+          "fraud_risk#w23"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr19",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w17",
+          "fraud_risk#w18",
+          "fraud_risk#w14",
+          "fraud_risk#w12",
+          "fraud_risk#w16"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w19",
+          "fraud_risk#w7",
+          "fraud_risk#w18",
+          "fraud_risk#w6",
+          "fraud_risk#w21"
+        ],
+        "context_words": 1040
+      }
+    ],
+    "chunks": 81,
+    "ms_per_query": 16.1
+  },
+  "fixed/hybrid": {
+    "recall@5": 0.964,
+    "hit@1": 0.727,
+    "mrr": 0.835,
+    "recall_by_kind": {
+      "lookup": 1.0,
+      "multi": 1.0,
+      "numeric": 0.938,
+      "paraphrase": 0.938,
+      "table": 1.0
+    },
+    "avg_context_words": 1038,
+    "misses": [
+      "cl06",
+      "fr10"
+    ],
+    "rows": [
+      {
+        "id": "cl01",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w5",
+          "customer_liability#w9",
+          "customer_liability#w8",
+          "customer_liability#w7",
+          "customer_liability#w13"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl02",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w6",
+          "customer_liability#w5",
+          "fraud_risk#w14",
+          "customer_liability#w8",
+          "customer_liability#w7"
+        ],
+        "context_words": 1056
+      },
+      {
+        "id": "cl03",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w6",
+          "customer_liability#w7",
+          "customer_liability#w5",
+          "customer_liability#w8",
+          "customer_liability#w9"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w8",
+          "customer_liability#w5",
+          "customer_liability#w9",
+          "customer_liability#w7",
+          "customer_liability#w6"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w9",
+          "customer_liability#w8",
+          "customer_liability#w4",
+          "customer_liability#w6",
+          "customer_liability#w7"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl06",
+        "kind": "paraphrase",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "customer_liability#w8",
+          "customer_liability#w5",
+          "customer_liability#w6",
+          "customer_liability#w13",
+          "customer_liability#w4"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl07",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability#w13",
+          "customer_liability#w5",
+          "customer_liability#w4",
+          "customer_liability#w14",
+          "customer_liability#w15"
+        ],
+        "context_words": 946
+      },
+      {
+        "id": "cl08",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w8",
+          "customer_liability#w7",
+          "customer_liability#w5",
+          "customer_liability#w9",
+          "customer_liability#w6"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl09",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w4",
+          "customer_liability#w1",
+          "customer_liability#w2",
+          "customer_liability#w11",
+          "customer_liability#w8"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w2",
+          "customer_liability#w3",
+          "customer_liability#w4",
+          "customer_liability#w1",
+          "customer_liability#w10"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl11",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w9",
+          "customer_liability#w14",
+          "customer_liability#w13",
+          "customer_liability#w12",
+          "customer_liability#w11"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl12",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w7",
+          "customer_liability#w8",
+          "customer_liability#w5",
+          "customer_liability#w6",
+          "fraud_risk#w14"
+        ],
+        "context_words": 1056
+      },
+      {
+        "id": "cl13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability#w11",
+          "customer_liability#w10",
+          "customer_liability#w4",
+          "customer_liability#w3",
+          "customer_liability#w2"
+        ],
+        "context_words": 1060
+      },
+      {
+        "id": "cl14",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w13",
+          "customer_liability#w5",
+          "fraud_risk#w21",
+          "customer_liability#w9",
+          "customer_liability#w8"
+        ],
+        "context_words": 1052
+      },
+      {
+        "id": "dl01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w13",
+          "digital_lending#w12",
+          "digital_lending#w34",
+          "digital_lending#w32",
+          "digital_lending#w27"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl02",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w15",
+          "digital_lending#w31",
+          "digital_lending#w30",
+          "digital_lending#w18",
+          "digital_lending#w16"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending#w4",
+          "digital_lending#w11",
+          "digital_lending#w12",
+          "digital_lending#w23",
+          "digital_lending#w5"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w17",
+          "digital_lending#w15",
+          "digital_lending#w16",
+          "digital_lending#w14",
+          "digital_lending#w9"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl05",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w13",
+          "digital_lending#w12",
+          "fraud_risk#w17",
+          "digital_lending#w32",
+          "digital_lending#w34"
+        ],
+        "context_words": 1028
+      },
+      {
+        "id": "dl06",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w14",
+          "customer_liability#w9",
+          "digital_lending#w13",
+          "customer_liability#w8",
+          "customer_liability#w4"
+        ],
+        "context_words": 1046
+      },
+      {
+        "id": "dl07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending#w33",
+          "digital_lending#w25",
+          "digital_lending#w32",
+          "digital_lending#w4",
+          "digital_lending#w26"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl08",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w27",
+          "digital_lending#w3",
+          "digital_lending#w28",
+          "digital_lending#w4",
+          "digital_lending#w13"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl09",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w25",
+          "digital_lending#w4",
+          "digital_lending#w3",
+          "digital_lending#w28",
+          "digital_lending#w21"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w24",
+          "digital_lending#w23",
+          "digital_lending#w3",
+          "digital_lending#w22",
+          "digital_lending#w28"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl11",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "digital_lending#w3",
+          "digital_lending#w4",
+          "digital_lending#w22",
+          "digital_lending#w28",
+          "digital_lending#w21"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl12",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w7",
+          "digital_lending#w31",
+          "digital_lending#w8",
+          "digital_lending#w4",
+          "digital_lending#w11"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl13",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w8",
+          "digital_lending#w9",
+          "digital_lending#w7",
+          "customer_liability#w7",
+          "customer_liability#w6"
+        ],
+        "context_words": 1039
+      },
+      {
+        "id": "dl14",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w8",
+          "digital_lending#w15",
+          "digital_lending#w18",
+          "digital_lending#w20",
+          "digital_lending#w7"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w20",
+          "digital_lending#w19",
+          "digital_lending#w21",
+          "digital_lending#w1",
+          "digital_lending#w30"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending#w31",
+          "digital_lending#w21",
+          "digital_lending#w19",
+          "digital_lending#w10",
+          "digital_lending#w30"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl17",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w17",
+          "digital_lending#w16",
+          "digital_lending#w15",
+          "digital_lending#w4",
+          "digital_lending#w1"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl18",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.25,
+        "retrieved": [
+          "digital_lending#w4",
+          "digital_lending#w23",
+          "digital_lending#w25",
+          "digital_lending#w27",
+          "digital_lending#w28"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl19",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w29",
+          "digital_lending#w23",
+          "digital_lending#w24",
+          "digital_lending#w4",
+          "digital_lending#w28"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending#w10",
+          "digital_lending#w11",
+          "digital_lending#w5",
+          "digital_lending#w7",
+          "digital_lending#w4"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "dl21",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending#w4",
+          "digital_lending#w12",
+          "digital_lending#w11",
+          "digital_lending#w7",
+          "digital_lending#w22"
+        ],
+        "context_words": 1025
+      },
+      {
+        "id": "fr01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w5",
+          "fraud_risk#w4",
+          "customer_liability#w3",
+          "customer_liability#w4",
+          "fraud_risk#w13"
+        ],
+        "context_words": 1048
+      },
+      {
+        "id": "fr02",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w6",
+          "fraud_risk#w5",
+          "fraud_risk#w4",
+          "fraud_risk#w8",
+          "fraud_risk#w7"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w5",
+          "fraud_risk#w6",
+          "fraud_risk#w7",
+          "fraud_risk#w26",
+          "fraud_risk#w16"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w13",
+          "fraud_risk#w14",
+          "fraud_risk#w12",
+          "fraud_risk#w10",
+          "fraud_risk#w24"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "customer_liability#w3",
+          "fraud_risk#w7",
+          "fraud_risk#w8",
+          "customer_liability#w2",
+          "customer_liability#w6"
+        ],
+        "context_words": 1052
+      },
+      {
+        "id": "fr06",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w13",
+          "fraud_risk#w14",
+          "fraud_risk#w12",
+          "fraud_risk#w7",
+          "fraud_risk#w10"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w21",
+          "fraud_risk#w16",
+          "fraud_risk#w25",
+          "fraud_risk#w12",
+          "digital_lending#w9"
+        ],
+        "context_words": 1037
+      },
+      {
+        "id": "fr08",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w18",
+          "fraud_risk#w24",
+          "fraud_risk#w14",
+          "fraud_risk#w23",
+          "fraud_risk#w3"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr09",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w19",
+          "fraud_risk#w18",
+          "fraud_risk#w21",
+          "digital_lending#w14",
+          "fraud_risk#w24"
+        ],
+        "context_words": 1037
+      },
+      {
+        "id": "fr10",
+        "kind": "numeric",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "fraud_risk#w27",
+          "fraud_risk#w13",
+          "fraud_risk#w19",
+          "fraud_risk#w24",
+          "fraud_risk#w5"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr11",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w22",
+          "fraud_risk#w23",
+          "fraud_risk#w14",
+          "fraud_risk#w18",
+          "fraud_risk#w13"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr12",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w24",
+          "fraud_risk#w25",
+          "fraud_risk#w26",
+          "fraud_risk#w19",
+          "fraud_risk#w12"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w26",
+          "fraud_risk#w27",
+          "fraud_risk#w4",
+          "fraud_risk#w22",
+          "fraud_risk#w23"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr14",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w27",
+          "fraud_risk#w24",
+          "customer_liability#w4",
+          "fraud_risk#w21",
+          "customer_liability#w3"
+        ],
+        "context_words": 1048
+      },
+      {
+        "id": "fr15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w23",
+          "fraud_risk#w24",
+          "fraud_risk#w19",
+          "customer_liability#w11",
+          "customer_liability#w6"
+        ],
+        "context_words": 1048
+      },
+      {
+        "id": "fr16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w24",
+          "fraud_risk#w25",
+          "fraud_risk#w13",
+          "fraud_risk#w14",
+          "fraud_risk#w12"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr17",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w16",
+          "fraud_risk#w15",
+          "fraud_risk#w21",
+          "fraud_risk#w19",
+          "fraud_risk#w6"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr18",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk#w19",
+          "fraud_risk#w22",
+          "fraud_risk#w27",
+          "fraud_risk#w18",
+          "fraud_risk#w14"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr19",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w17",
+          "fraud_risk#w18",
+          "fraud_risk#w16",
+          "fraud_risk#w12",
+          "fraud_risk#w22"
+        ],
+        "context_words": 1040
+      },
+      {
+        "id": "fr20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk#w7",
+          "fraud_risk#w6",
+          "fraud_risk#w18",
+          "fraud_risk#w30",
+          "fraud_risk#w5"
+        ],
+        "context_words": 1040
+      }
+    ],
+    "chunks": 81,
+    "ms_per_query": 15.8
+  },
+  "clause/bm25": {
+    "recall@5": 0.909,
+    "hit@1": 0.691,
+    "mrr": 0.783,
+    "recall_by_kind": {
+      "lookup": 0.941,
+      "multi": 1.0,
+      "numeric": 0.938,
+      "paraphrase": 0.812,
+      "table": 1.0
+    },
+    "avg_context_words": 807,
+    "misses": [
+      "cl01",
+      "cl06",
+      "cl14",
+      "dl18",
+      "fr10"
+    ],
+    "rows": [
+      {
+        "id": "cl01",
+        "kind": "paraphrase",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "customer_liability:10",
+          "customer_liability:8",
+          "customer_liability:Annex#2",
+          "customer_liability:7#1",
+          "fraud_risk:4.1#2"
+        ],
+        "context_words": 1216
+      },
+      {
+        "id": "cl02",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "customer_liability:6",
+          "customer_liability:8",
+          "customer_liability:7#1",
+          "fraud_risk:4.2",
+          "customer_liability:7#2"
+        ],
+        "context_words": 771
+      },
+      {
+        "id": "cl03",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:7#2",
+          "customer_liability:7#1",
+          "customer_liability:8",
+          "customer_liability:6",
+          "customer_liability:9"
+        ],
+        "context_words": 764
+      },
+      {
+        "id": "cl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability:7#1",
+          "customer_liability:9",
+          "customer_liability:8",
+          "customer_liability:6",
+          "customer_liability:5#2"
+        ],
+        "context_words": 922
+      },
+      {
+        "id": "cl05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:10",
+          "customer_liability:5#2",
+          "customer_liability:9",
+          "customer_liability:6",
+          "customer_liability:7#1"
+        ],
+        "context_words": 907
+      },
+      {
+        "id": "cl06",
+        "kind": "paraphrase",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "customer_liability:7#1",
+          "customer_liability:9",
+          "customer_liability:6",
+          "customer_liability:5#2",
+          "customer_liability:8"
+        ],
+        "context_words": 922
+      },
+      {
+        "id": "cl07",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability:Annex#2",
+          "customer_liability:7#1",
+          "customer_liability:10",
+          "customer_liability:5#2",
+          "digital_lending:Annex II#1"
+        ],
+        "context_words": 1413
+      },
+      {
+        "id": "cl08",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:8",
+          "customer_liability:6",
+          "customer_liability:9",
+          "customer_liability:7#1",
+          "customer_liability:7#2"
+        ],
+        "context_words": 764
+      },
+      {
+        "id": "cl09",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability:13",
+          "customer_liability:5#2",
+          "customer_liability:3",
+          "customer_liability:8",
+          "customer_liability:12"
+        ],
+        "context_words": 790
+      },
+      {
+        "id": "cl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:5#2",
+          "customer_liability:4",
+          "customer_liability:11",
+          "customer_liability:5#1",
+          "customer_liability:preamble"
+        ],
+        "context_words": 779
+      },
+      {
+        "id": "cl11",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:10",
+          "customer_liability:Annex#1",
+          "customer_liability:14",
+          "customer_liability:Annex#2",
+          "digital_lending:29#1"
+        ],
+        "context_words": 1038
+      },
+      {
+        "id": "cl12",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:8",
+          "fraud_risk:4.2",
+          "customer_liability:6",
+          "customer_liability:7#1",
+          "fraud_risk:9.1"
+        ],
+        "context_words": 644
+      },
+      {
+        "id": "cl13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:13",
+          "customer_liability:5#1",
+          "customer_liability:4",
+          "customer_liability:5#2",
+          "customer_liability:preamble"
+        ],
+        "context_words": 734
+      },
+      {
+        "id": "cl14",
+        "kind": "paraphrase",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "fraud_risk:4.1#1",
+          "digital_lending:17#1",
+          "customer_liability:9",
+          "fraud_risk:6.2",
+          "fraud_risk:4.2"
+        ],
+        "context_words": 751
+      },
+      {
+        "id": "dl01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:10",
+          "fraud_risk:4.4",
+          "digital_lending:26",
+          "fraud_risk:2.1#2",
+          "customer_liability:5#2"
+        ],
+        "context_words": 850
+      },
+      {
+        "id": "dl02",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending:Annex I",
+          "digital_lending:12",
+          "digital_lending:13#1",
+          "fraud_risk:Appendix#1",
+          "digital_lending:10"
+        ],
+        "context_words": 704
+      },
+      {
+        "id": "dl03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:9#1",
+          "digital_lending:4#2",
+          "digital_lending:19#2",
+          "digital_lending:9#2",
+          "digital_lending:23"
+        ],
+        "context_words": 720
+      },
+      {
+        "id": "dl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:13#2",
+          "digital_lending:12",
+          "digital_lending:11#2",
+          "fraud_risk:1.2",
+          "customer_liability:5#2"
+        ],
+        "context_words": 954
+      },
+      {
+        "id": "dl05",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:10",
+          "digital_lending:Annex II#3",
+          "fraud_risk:4.4",
+          "digital_lending:26",
+          "digital_lending:6#1"
+        ],
+        "context_words": 723
+      },
+      {
+        "id": "dl06",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:11#2",
+          "customer_liability:10",
+          "customer_liability:5#2",
+          "digital_lending:8#2",
+          "customer_liability:7#1"
+        ],
+        "context_words": 941
+      },
+      {
+        "id": "dl07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "digital_lending:Annex II#2",
+          "digital_lending:4#1",
+          "digital_lending:23",
+          "digital_lending:Annex II#3",
+          "digital_lending:26"
+        ],
+        "context_words": 707
+      },
+      {
+        "id": "dl08",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:26",
+          "digital_lending:4#1",
+          "digital_lending:Annex III",
+          "customer_liability:5#2",
+          "digital_lending:28"
+        ],
+        "context_words": 795
+      },
+      {
+        "id": "dl09",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:22",
+          "digital_lending:4#1",
+          "digital_lending:Annex III",
+          "digital_lending:18",
+          "digital_lending:28"
+        ],
+        "context_words": 489
+      },
+      {
+        "id": "dl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending:4#1",
+          "digital_lending:20",
+          "digital_lending:18",
+          "digital_lending:Annex III",
+          "customer_liability:Annex#2"
+        ],
+        "context_words": 1032
+      },
+      {
+        "id": "dl11",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "digital_lending:4#1",
+          "digital_lending:Annex III",
+          "digital_lending:18",
+          "digital_lending:28",
+          "customer_liability:5#2"
+        ],
+        "context_words": 783
+      },
+      {
+        "id": "dl12",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:6#1",
+          "digital_lending:6#2",
+          "digital_lending:Annex I",
+          "fraud_risk:8.2",
+          "fraud_risk:2.1#1"
+        ],
+        "context_words": 736
+      },
+      {
+        "id": "dl13",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:7",
+          "fraud_risk:4.1#1",
+          "customer_liability:7#2",
+          "customer_liability:9",
+          "digital_lending:29#2"
+        ],
+        "context_words": 661
+      },
+      {
+        "id": "dl14",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:7",
+          "customer_liability:4",
+          "digital_lending:17#2",
+          "digital_lending:12",
+          "digital_lending:14"
+        ],
+        "context_words": 720
+      },
+      {
+        "id": "dl15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:17#2",
+          "digital_lending:17#1",
+          "digital_lending:Annex I",
+          "digital_lending:17#3",
+          "digital_lending:1#1"
+        ],
+        "context_words": 853
+      },
+      {
+        "id": "dl16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending:Annex I",
+          "digital_lending:17#2",
+          "fraud_risk:Appendix#1",
+          "digital_lending:Annex III",
+          "digital_lending:8#2"
+        ],
+        "context_words": 617
+      },
+      {
+        "id": "dl17",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:13#1",
+          "digital_lending:Annex I",
+          "digital_lending:12",
+          "digital_lending:4#2",
+          "digital_lending:19#1"
+        ],
+        "context_words": 829
+      },
+      {
+        "id": "dl18",
+        "kind": "lookup",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "digital_lending:4#1",
+          "fraud_risk:4.2",
+          "digital_lending:20",
+          "digital_lending:19#2",
+          "digital_lending:18"
+        ],
+        "context_words": 656
+      },
+      {
+        "id": "dl19",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:29#1",
+          "digital_lending:20",
+          "digital_lending:28",
+          "customer_liability:Annex#1",
+          "customer_liability:14"
+        ],
+        "context_words": 630
+      },
+      {
+        "id": "dl20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:8#2",
+          "digital_lending:17#2",
+          "digital_lending:9#2",
+          "digital_lending:Annex II#3",
+          "digital_lending:6#1"
+        ],
+        "context_words": 852
+      },
+      {
+        "id": "dl21",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "digital_lending:19#1",
+          "digital_lending:4#2",
+          "digital_lending:9#2",
+          "fraud_risk:4.2",
+          "digital_lending:18"
+        ],
+        "context_words": 567
+      },
+      {
+        "id": "fr01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:2.1#1",
+          "customer_liability:5#2",
+          "fraud_risk:2.1#3",
+          "digital_lending:12",
+          "digital_lending:11#2"
+        ],
+        "context_words": 1056
+      },
+      {
+        "id": "fr02",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk:2.1#3",
+          "fraud_risk:2.1#2",
+          "customer_liability:11",
+          "customer_liability:7#2",
+          "fraud_risk:3.1#2"
+        ],
+        "context_words": 795
+      },
+      {
+        "id": "fr03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:2.1#2",
+          "fraud_risk:2.1#3",
+          "fraud_risk:8.3",
+          "customer_liability:13",
+          "customer_liability:11"
+        ],
+        "context_words": 793
+      },
+      {
+        "id": "fr04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.1#2",
+          "fraud_risk:4.1#1",
+          "fraud_risk:3.3",
+          "fraud_risk:4.1#3",
+          "fraud_risk:3.1#1"
+        ],
+        "context_words": 908
+      },
+      {
+        "id": "fr05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:3.1#1",
+          "customer_liability:5#2",
+          "fraud_risk:4.3",
+          "customer_liability:7#2",
+          "digital_lending:26"
+        ],
+        "context_words": 964
+      },
+      {
+        "id": "fr06",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.1#2",
+          "fraud_risk:3.3",
+          "fraud_risk:4.1#1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:3.1#1"
+        ],
+        "context_words": 908
+      },
+      {
+        "id": "fr07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.4",
+          "digital_lending:6#1",
+          "fraud_risk:8.2",
+          "digital_lending:9#1",
+          "digital_lending:3"
+        ],
+        "context_words": 693
+      },
+      {
+        "id": "fr08",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:5.1",
+          "fraud_risk:5.2",
+          "fraud_risk:1.3",
+          "digital_lending:Annex II#2",
+          "fraud_risk:4.1#3"
+        ],
+        "context_words": 502
+      },
+      {
+        "id": "fr09",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:5.1",
+          "digital_lending:11#2",
+          "customer_liability:5#2",
+          "customer_liability:7#2",
+          "fraud_risk:6.3#1"
+        ],
+        "context_words": 1020
+      },
+      {
+        "id": "fr10",
+        "kind": "numeric",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "customer_liability:5#2",
+          "fraud_risk:2.1#2",
+          "fraud_risk:5.1",
+          "fraud_risk:9.2",
+          "fraud_risk:7.2"
+        ],
+        "context_words": 854
+      },
+      {
+        "id": "fr11",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:6.4",
+          "fraud_risk:5.1",
+          "customer_liability:9",
+          "fraud_risk:4.1#1",
+          "fraud_risk:8.2"
+        ],
+        "context_words": 768
+      },
+      {
+        "id": "fr12",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:8.1",
+          "fraud_risk:1.1",
+          "fraud_risk:8.3",
+          "fraud_risk:2.1#3",
+          "fraud_risk:6.1"
+        ],
+        "context_words": 647
+      },
+      {
+        "id": "fr13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:8.4",
+          "fraud_risk:6.4",
+          "fraud_risk:1.3",
+          "fraud_risk:8.3",
+          "digital_lending:7"
+        ],
+        "context_words": 626
+      },
+      {
+        "id": "fr14",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:9.1",
+          "customer_liability:5#2",
+          "fraud_risk:9.2",
+          "customer_liability:8",
+          "customer_liability:4"
+        ],
+        "context_words": 771
+      },
+      {
+        "id": "fr15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:7.1",
+          "fraud_risk:7.2",
+          "customer_liability:7#1",
+          "customer_liability:Annex#1",
+          "digital_lending:10"
+        ],
+        "context_words": 632
+      },
+      {
+        "id": "fr16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:8.2",
+          "fraud_risk:4.1#1",
+          "digital_lending:24",
+          "fraud_risk:4.1#3",
+          "fraud_risk:7.2"
+        ],
+        "context_words": 677
+      },
+      {
+        "id": "fr17",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.3",
+          "fraud_risk:5.1",
+          "fraud_risk:6.3#1",
+          "fraud_risk:2.1#2",
+          "customer_liability:11"
+        ],
+        "context_words": 880
+      },
+      {
+        "id": "fr18",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.25,
+        "retrieved": [
+          "fraud_risk:5.1",
+          "digital_lending:Annex I",
+          "fraud_risk:9.2",
+          "fraud_risk:6.3#2",
+          "fraud_risk:Appendix#2"
+        ],
+        "context_words": 942
+      },
+      {
+        "id": "fr19",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.5",
+          "fraud_risk:4.4",
+          "fraud_risk:1.2",
+          "digital_lending:30",
+          "fraud_risk:8.2"
+        ],
+        "context_words": 721
+      },
+      {
+        "id": "fr20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:2.2",
+          "fraud_risk:6.3#2",
+          "fraud_risk:2.1#2",
+          "digital_lending:17#1",
+          "fraud_risk:Appendix#2"
+        ],
+        "context_words": 996
+      }
+    ],
+    "chunks": 108,
+    "ms_per_query": 0.5
+  },
+  "clause/dense": {
+    "recall@5": 0.9,
+    "hit@1": 0.745,
+    "mrr": 0.812,
+    "recall_by_kind": {
+      "lookup": 0.941,
+      "multi": 1.0,
+      "numeric": 0.906,
+      "paraphrase": 0.812,
+      "table": 1.0
+    },
+    "avg_context_words": 753,
+    "misses": [
+      "cl01",
+      "cl11",
+      "cl14",
+      "dl09",
+      "fr04",
+      "fr10"
+    ],
+    "rows": [
+      {
+        "id": "cl01",
+        "kind": "paraphrase",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "fraud_risk:9.2",
+          "customer_liability:7#1",
+          "customer_liability:9",
+          "fraud_risk:9.1",
+          "customer_liability:5#2"
+        ],
+        "context_words": 779
+      },
+      {
+        "id": "cl02",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.25,
+        "retrieved": [
+          "fraud_risk:9.2",
+          "fraud_risk:4.1#2",
+          "customer_liability:8",
+          "customer_liability:7#2",
+          "customer_liability:7#1"
+        ],
+        "context_words": 788
+      },
+      {
+        "id": "cl03",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:7#2",
+          "customer_liability:8",
+          "customer_liability:7#1",
+          "customer_liability:9",
+          "customer_liability:preamble"
+        ],
+        "context_words": 731
+      },
+      {
+        "id": "cl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:9",
+          "customer_liability:10",
+          "customer_liability:8",
+          "customer_liability:7#1",
+          "customer_liability:5#2"
+        ],
+        "context_words": 954
+      },
+      {
+        "id": "cl05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:10",
+          "customer_liability:12",
+          "customer_liability:7#1",
+          "customer_liability:9",
+          "customer_liability:8"
+        ],
+        "context_words": 641
+      },
+      {
+        "id": "cl06",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:12",
+          "customer_liability:7#1",
+          "customer_liability:2",
+          "customer_liability:6",
+          "customer_liability:13"
+        ],
+        "context_words": 550
+      },
+      {
+        "id": "cl07",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "customer_liability:5#2",
+          "customer_liability:9",
+          "customer_liability:7#1",
+          "digital_lending:12",
+          "fraud_risk:6.3#2"
+        ],
+        "context_words": 954
+      },
+      {
+        "id": "cl08",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:8",
+          "customer_liability:7#1",
+          "customer_liability:10",
+          "customer_liability:9",
+          "customer_liability:6"
+        ],
+        "context_words": 715
+      },
+      {
+        "id": "cl09",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:5#2",
+          "customer_liability:6",
+          "customer_liability:preamble",
+          "customer_liability:12",
+          "customer_liability:7#1"
+        ],
+        "context_words": 760
+      },
+      {
+        "id": "cl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:5#2",
+          "customer_liability:4",
+          "customer_liability:14",
+          "customer_liability:3",
+          "customer_liability:13"
+        ],
+        "context_words": 797
+      },
+      {
+        "id": "cl11",
+        "kind": "paraphrase",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "customer_liability:Annex#2",
+          "customer_liability:7#1",
+          "customer_liability:2",
+          "customer_liability:9",
+          "customer_liability:11"
+        ],
+        "context_words": 1104
+      },
+      {
+        "id": "cl12",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:8",
+          "customer_liability:7#1",
+          "customer_liability:7#2",
+          "fraud_risk:6.3#1",
+          "fraud_risk:4.2"
+        ],
+        "context_words": 860
+      },
+      {
+        "id": "cl13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:13",
+          "customer_liability:5#2",
+          "customer_liability:5#1",
+          "customer_liability:4",
+          "customer_liability:11"
+        ],
+        "context_words": 842
+      },
+      {
+        "id": "cl14",
+        "kind": "paraphrase",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "fraud_risk:6.3#1",
+          "fraud_risk:4.1#1",
+          "fraud_risk:7.2",
+          "fraud_risk:8.3",
+          "fraud_risk:4.1#3"
+        ],
+        "context_words": 771
+      },
+      {
+        "id": "dl01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:10",
+          "digital_lending:4#1",
+          "digital_lending:1#1",
+          "digital_lending:7",
+          "digital_lending:4#2"
+        ],
+        "context_words": 733
+      },
+      {
+        "id": "dl02",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:12",
+          "digital_lending:4#2",
+          "digital_lending:17#2",
+          "digital_lending:Annex I",
+          "digital_lending:8#1"
+        ],
+        "context_words": 912
+      },
+      {
+        "id": "dl03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:9#1",
+          "digital_lending:9#2",
+          "digital_lending:4#2",
+          "digital_lending:6#1",
+          "digital_lending:10"
+        ],
+        "context_words": 777
+      },
+      {
+        "id": "dl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:13#2",
+          "digital_lending:12",
+          "digital_lending:9#2",
+          "fraud_risk:9.2",
+          "digital_lending:8#1"
+        ],
+        "context_words": 647
+      },
+      {
+        "id": "dl05",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:10",
+          "customer_liability:9",
+          "digital_lending:Annex II#1",
+          "digital_lending:4#1",
+          "digital_lending:9#2"
+        ],
+        "context_words": 728
+      },
+      {
+        "id": "dl06",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:11#2",
+          "customer_liability:10",
+          "digital_lending:10",
+          "customer_liability:8",
+          "fraud_risk:4.4"
+        ],
+        "context_words": 679
+      },
+      {
+        "id": "dl07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending:Annex II#2",
+          "digital_lending:23",
+          "digital_lending:28",
+          "digital_lending:Annex II#3",
+          "digital_lending:Annex II#1"
+        ],
+        "context_words": 773
+      },
+      {
+        "id": "dl08",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:26",
+          "digital_lending:4#1",
+          "customer_liability:9",
+          "digital_lending:10",
+          "digital_lending:18"
+        ],
+        "context_words": 545
+      },
+      {
+        "id": "dl09",
+        "kind": "lookup",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "digital_lending:4#1",
+          "digital_lending:18",
+          "digital_lending:28",
+          "digital_lending:6#2",
+          "digital_lending:8#2"
+        ],
+        "context_words": 552
+      },
+      {
+        "id": "dl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.25,
+        "retrieved": [
+          "digital_lending:18",
+          "digital_lending:4#1",
+          "digital_lending:28",
+          "digital_lending:20",
+          "digital_lending:6#2"
+        ],
+        "context_words": 580
+      },
+      {
+        "id": "dl11",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:18",
+          "digital_lending:4#1",
+          "digital_lending:28",
+          "digital_lending:3",
+          "digital_lending:24"
+        ],
+        "context_words": 543
+      },
+      {
+        "id": "dl12",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:6#1",
+          "digital_lending:6#2",
+          "digital_lending:4#2",
+          "digital_lending:7",
+          "digital_lending:3"
+        ],
+        "context_words": 583
+      },
+      {
+        "id": "dl13",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:7",
+          "digital_lending:1#1",
+          "digital_lending:6#1",
+          "digital_lending:4#2",
+          "digital_lending:10"
+        ],
+        "context_words": 759
+      },
+      {
+        "id": "dl14",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:7",
+          "digital_lending:12",
+          "digital_lending:16",
+          "digital_lending:4#2",
+          "digital_lending:17#2"
+        ],
+        "context_words": 800
+      },
+      {
+        "id": "dl15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:17#2",
+          "digital_lending:16",
+          "digital_lending:Annex I",
+          "digital_lending:17#1",
+          "digital_lending:4#2"
+        ],
+        "context_words": 840
+      },
+      {
+        "id": "dl16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:17#2",
+          "digital_lending:16",
+          "digital_lending:17#3",
+          "digital_lending:8#1",
+          "digital_lending:4#2"
+        ],
+        "context_words": 787
+      },
+      {
+        "id": "dl17",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:13#1",
+          "digital_lending:12",
+          "digital_lending:3",
+          "digital_lending:1#1",
+          "fraud_risk:4.2"
+        ],
+        "context_words": 795
+      },
+      {
+        "id": "dl18",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:27",
+          "digital_lending:Annex II#2",
+          "digital_lending:23",
+          "digital_lending:18",
+          "digital_lending:Annex II#3"
+        ],
+        "context_words": 633
+      },
+      {
+        "id": "dl19",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:29#1",
+          "digital_lending:1#1",
+          "digital_lending:4#1",
+          "digital_lending:4#2",
+          "digital_lending:6#1"
+        ],
+        "context_words": 894
+      },
+      {
+        "id": "dl20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:8#2",
+          "digital_lending:9#2",
+          "digital_lending:11#1",
+          "digital_lending:6#1",
+          "digital_lending:17#2"
+        ],
+        "context_words": 759
+      },
+      {
+        "id": "dl21",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending:4#2",
+          "digital_lending:9#1",
+          "digital_lending:6#1",
+          "digital_lending:9#2",
+          "digital_lending:7"
+        ],
+        "context_words": 748
+      },
+      {
+        "id": "fr01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability:5#2",
+          "fraud_risk:2.1#1",
+          "customer_liability:10",
+          "fraud_risk:4.1#2",
+          "fraud_risk:4.4"
+        ],
+        "context_words": 1014
+      },
+      {
+        "id": "fr02",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:2.1#2",
+          "fraud_risk:2.1#3",
+          "fraud_risk:2.1#1",
+          "fraud_risk:2.2",
+          "fraud_risk:1.1"
+        ],
+        "context_words": 654
+      },
+      {
+        "id": "fr03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:2.1#2",
+          "fraud_risk:2.1#3",
+          "fraud_risk:2.1#1",
+          "fraud_risk:8.3",
+          "fraud_risk:2.2"
+        ],
+        "context_words": 729
+      },
+      {
+        "id": "fr04",
+        "kind": "numeric",
+        "recall": 0.5,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.1#2",
+          "fraud_risk:4.1#1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:3.1#1",
+          "fraud_risk:9.2"
+        ],
+        "context_words": 776
+      },
+      {
+        "id": "fr05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:3.1#1",
+          "customer_liability:5#2",
+          "fraud_risk:3.3",
+          "fraud_risk:8.4",
+          "fraud_risk:3.1#2"
+        ],
+        "context_words": 961
+      },
+      {
+        "id": "fr06",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.1#2",
+          "fraud_risk:4.1#3",
+          "fraud_risk:4.1#1",
+          "fraud_risk:3.1#1",
+          "fraud_risk:3.1#2"
+        ],
+        "context_words": 788
+      },
+      {
+        "id": "fr07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.4",
+          "fraud_risk:4.1#2",
+          "fraud_risk:6.3#1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:4.1#1"
+        ],
+        "context_words": 852
+      },
+      {
+        "id": "fr08",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:5.1",
+          "fraud_risk:5.2",
+          "fraud_risk:4.2",
+          "fraud_risk:6.1",
+          "fraud_risk:7.2"
+        ],
+        "context_words": 620
+      },
+      {
+        "id": "fr09",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:5.1",
+          "fraud_risk:7.2",
+          "fraud_risk:6.3#1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:7.1"
+        ],
+        "context_words": 699
+      },
+      {
+        "id": "fr10",
+        "kind": "numeric",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "fraud_risk:4.1#2",
+          "fraud_risk:4.1#3",
+          "fraud_risk:6.1",
+          "fraud_risk:4.1#1",
+          "fraud_risk:7.2"
+        ],
+        "context_words": 826
+      },
+      {
+        "id": "fr11",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:6.4",
+          "fraud_risk:4.1#1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:7.1",
+          "fraud_risk:4.1#2"
+        ],
+        "context_words": 833
+      },
+      {
+        "id": "fr12",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:8.1",
+          "fraud_risk:4.1#1",
+          "customer_liability:13",
+          "digital_lending:27",
+          "fraud_risk:8.3"
+        ],
+        "context_words": 718
+      },
+      {
+        "id": "fr13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:8.4",
+          "fraud_risk:6.1",
+          "fraud_risk:9.1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:3.1#1"
+        ],
+        "context_words": 711
+      },
+      {
+        "id": "fr14",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk:9.2",
+          "fraud_risk:9.1",
+          "fraud_risk:6.3#1",
+          "fraud_risk:5.1",
+          "fraud_risk:4.1#2"
+        ],
+        "context_words": 672
+      },
+      {
+        "id": "fr15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk:7.2",
+          "fraud_risk:7.1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:4.1#1",
+          "fraud_risk:6.1"
+        ],
+        "context_words": 750
+      },
+      {
+        "id": "fr16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:8.2",
+          "fraud_risk:4.1#1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:7.2",
+          "fraud_risk:4.1#2"
+        ],
+        "context_words": 737
+      },
+      {
+        "id": "fr17",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "fraud_risk:5.1",
+          "fraud_risk:2.1#2",
+          "fraud_risk:4.3",
+          "fraud_risk:5.2",
+          "fraud_risk:6.3#1"
+        ],
+        "context_words": 739
+      },
+      {
+        "id": "fr18",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:6.3#2",
+          "fraud_risk:7.2",
+          "fraud_risk:7.1",
+          "fraud_risk:6.4",
+          "fraud_risk:4.1#1"
+        ],
+        "context_words": 722
+      },
+      {
+        "id": "fr19",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.5",
+          "fraud_risk:4.4",
+          "fraud_risk:4.1#1",
+          "fraud_risk:8.2",
+          "fraud_risk:6.3#2"
+        ],
+        "context_words": 721
+      },
+      {
+        "id": "fr20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:2.2",
+          "fraud_risk:5.1",
+          "fraud_risk:5.2",
+          "fraud_risk:8.3",
+          "fraud_risk:2.1#2"
+        ],
+        "context_words": 560
+      }
+    ],
+    "chunks": 108,
+    "ms_per_query": 360.3
+  },
+  "clause/hybrid": {
+    "recall@5": 0.936,
+    "hit@1": 0.745,
+    "mrr": 0.836,
+    "recall_by_kind": {
+      "lookup": 1.0,
+      "multi": 1.0,
+      "numeric": 0.906,
+      "paraphrase": 0.875,
+      "table": 1.0
+    },
+    "avg_context_words": 772,
+    "misses": [
+      "cl01",
+      "cl14",
+      "fr04",
+      "fr10"
+    ],
+    "rows": [
+      {
+        "id": "cl01",
+        "kind": "paraphrase",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "customer_liability:7#1",
+          "customer_liability:8",
+          "customer_liability:9",
+          "customer_liability:10",
+          "fraud_risk:4.1#2"
+        ],
+        "context_words": 797
+      },
+      {
+        "id": "cl02",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability:8",
+          "customer_liability:7#1",
+          "customer_liability:7#2",
+          "customer_liability:9",
+          "fraud_risk:4.1#2"
+        ],
+        "context_words": 846
+      },
+      {
+        "id": "cl03",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:7#2",
+          "customer_liability:7#1",
+          "customer_liability:8",
+          "customer_liability:9",
+          "customer_liability:6"
+        ],
+        "context_words": 764
+      },
+      {
+        "id": "cl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:9",
+          "customer_liability:7#1",
+          "customer_liability:8",
+          "customer_liability:10",
+          "customer_liability:5#2"
+        ],
+        "context_words": 954
+      },
+      {
+        "id": "cl05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:10",
+          "customer_liability:9",
+          "customer_liability:7#1",
+          "customer_liability:6",
+          "customer_liability:8"
+        ],
+        "context_words": 715
+      },
+      {
+        "id": "cl06",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "customer_liability:7#1",
+          "customer_liability:6",
+          "customer_liability:12",
+          "customer_liability:9",
+          "customer_liability:2"
+        ],
+        "context_words": 528
+      },
+      {
+        "id": "cl07",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability:5#2",
+          "customer_liability:7#1",
+          "fraud_risk:4.1#3",
+          "customer_liability:Annex#2",
+          "fraud_risk:4.1#2"
+        ],
+        "context_words": 1382
+      },
+      {
+        "id": "cl08",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:8",
+          "customer_liability:7#1",
+          "customer_liability:6",
+          "customer_liability:9",
+          "customer_liability:10"
+        ],
+        "context_words": 715
+      },
+      {
+        "id": "cl09",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:5#2",
+          "customer_liability:12",
+          "customer_liability:3",
+          "customer_liability:2",
+          "customer_liability:13"
+        ],
+        "context_words": 709
+      },
+      {
+        "id": "cl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:5#2",
+          "customer_liability:4",
+          "customer_liability:11",
+          "customer_liability:13",
+          "customer_liability:3"
+        ],
+        "context_words": 913
+      },
+      {
+        "id": "cl11",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "customer_liability:Annex#2",
+          "customer_liability:10",
+          "customer_liability:Annex#1",
+          "customer_liability:2",
+          "customer_liability:14"
+        ],
+        "context_words": 926
+      },
+      {
+        "id": "cl12",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:8",
+          "customer_liability:7#1",
+          "fraud_risk:4.2",
+          "customer_liability:7#2",
+          "customer_liability:6"
+        ],
+        "context_words": 771
+      },
+      {
+        "id": "cl13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "customer_liability:13",
+          "customer_liability:5#1",
+          "customer_liability:5#2",
+          "customer_liability:4",
+          "customer_liability:preamble"
+        ],
+        "context_words": 734
+      },
+      {
+        "id": "cl14",
+        "kind": "paraphrase",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "fraud_risk:4.1#1",
+          "fraud_risk:6.3#1",
+          "fraud_risk:4.1#2",
+          "customer_liability:9",
+          "fraud_risk:7.2"
+        ],
+        "context_words": 844
+      },
+      {
+        "id": "dl01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:10",
+          "digital_lending:26",
+          "digital_lending:7",
+          "fraud_risk:4.4",
+          "digital_lending:Annex II#1"
+        ],
+        "context_words": 617
+      },
+      {
+        "id": "dl02",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:12",
+          "digital_lending:Annex I",
+          "digital_lending:13#1",
+          "digital_lending:4#2",
+          "digital_lending:14"
+        ],
+        "context_words": 774
+      },
+      {
+        "id": "dl03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:9#1",
+          "digital_lending:4#2",
+          "digital_lending:9#2",
+          "digital_lending:18",
+          "digital_lending:6#1"
+        ],
+        "context_words": 708
+      },
+      {
+        "id": "dl04",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:13#2",
+          "digital_lending:12",
+          "digital_lending:13#1",
+          "digital_lending:11#2",
+          "digital_lending:10"
+        ],
+        "context_words": 708
+      },
+      {
+        "id": "dl05",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:10",
+          "digital_lending:Annex II#1",
+          "customer_liability:9",
+          "fraud_risk:4.4",
+          "digital_lending:Annex II#3"
+        ],
+        "context_words": 776
+      },
+      {
+        "id": "dl06",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:11#2",
+          "customer_liability:10",
+          "customer_liability:8",
+          "digital_lending:10",
+          "digital_lending:11#1"
+        ],
+        "context_words": 670
+      },
+      {
+        "id": "dl07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending:Annex II#2",
+          "digital_lending:23",
+          "digital_lending:4#1",
+          "digital_lending:Annex II#3",
+          "digital_lending:Annex II#1"
+        ],
+        "context_words": 836
+      },
+      {
+        "id": "dl08",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:26",
+          "digital_lending:4#1",
+          "digital_lending:10",
+          "digital_lending:28",
+          "digital_lending:18"
+        ],
+        "context_words": 532
+      },
+      {
+        "id": "dl09",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "digital_lending:4#1",
+          "digital_lending:18",
+          "digital_lending:22",
+          "digital_lending:28",
+          "digital_lending:6#1"
+        ],
+        "context_words": 588
+      },
+      {
+        "id": "dl10",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.3333333333333333,
+        "retrieved": [
+          "digital_lending:4#1",
+          "digital_lending:18",
+          "digital_lending:20",
+          "digital_lending:28",
+          "digital_lending:29#1"
+        ],
+        "context_words": 693
+      },
+      {
+        "id": "dl11",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending:4#1",
+          "digital_lending:18",
+          "digital_lending:28",
+          "digital_lending:3",
+          "digital_lending:20"
+        ],
+        "context_words": 577
+      },
+      {
+        "id": "dl12",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:6#1",
+          "digital_lending:6#2",
+          "fraud_risk:8.2",
+          "digital_lending:Annex I",
+          "digital_lending:4#2"
+        ],
+        "context_words": 672
+      },
+      {
+        "id": "dl13",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:7",
+          "customer_liability:7#2",
+          "digital_lending:6#1",
+          "customer_liability:9",
+          "digital_lending:10"
+        ],
+        "context_words": 734
+      },
+      {
+        "id": "dl14",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:7",
+          "digital_lending:12",
+          "digital_lending:17#2",
+          "digital_lending:16",
+          "digital_lending:6#1"
+        ],
+        "context_words": 858
+      },
+      {
+        "id": "dl15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:17#2",
+          "digital_lending:17#1",
+          "digital_lending:Annex I",
+          "digital_lending:17#3",
+          "digital_lending:4#2"
+        ],
+        "context_words": 791
+      },
+      {
+        "id": "dl16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:17#2",
+          "digital_lending:Annex I",
+          "digital_lending:Annex III",
+          "digital_lending:17#1",
+          "digital_lending:8#1"
+        ],
+        "context_words": 844
+      },
+      {
+        "id": "dl17",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:13#1",
+          "digital_lending:12",
+          "digital_lending:4#2",
+          "fraud_risk:4.2",
+          "digital_lending:14"
+        ],
+        "context_words": 736
+      },
+      {
+        "id": "dl18",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:27",
+          "digital_lending:4#1",
+          "digital_lending:18",
+          "digital_lending:19#2",
+          "digital_lending:28"
+        ],
+        "context_words": 576
+      },
+      {
+        "id": "dl19",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:29#1",
+          "digital_lending:20",
+          "digital_lending:4#1",
+          "digital_lending:1#1",
+          "digital_lending:16"
+        ],
+        "context_words": 880
+      },
+      {
+        "id": "dl20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "digital_lending:8#2",
+          "digital_lending:9#2",
+          "digital_lending:17#2",
+          "digital_lending:6#1",
+          "digital_lending:4#2"
+        ],
+        "context_words": 783
+      },
+      {
+        "id": "dl21",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "digital_lending:4#2",
+          "digital_lending:9#2",
+          "digital_lending:6#1",
+          "digital_lending:9#1",
+          "fraud_risk:4.2"
+        ],
+        "context_words": 777
+      },
+      {
+        "id": "fr01",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:2.1#1",
+          "customer_liability:5#2",
+          "fraud_risk:4.1#2",
+          "digital_lending:11#2",
+          "customer_liability:7#2"
+        ],
+        "context_words": 1066
+      },
+      {
+        "id": "fr02",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk:2.1#3",
+          "fraud_risk:2.1#2",
+          "fraud_risk:2.1#1",
+          "fraud_risk:3.1#2",
+          "customer_liability:7#2"
+        ],
+        "context_words": 810
+      },
+      {
+        "id": "fr03",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:2.1#2",
+          "fraud_risk:2.1#3",
+          "fraud_risk:8.3",
+          "customer_liability:13",
+          "fraud_risk:4.3"
+        ],
+        "context_words": 770
+      },
+      {
+        "id": "fr04",
+        "kind": "numeric",
+        "recall": 0.5,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.1#2",
+          "fraud_risk:4.1#1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:3.1#1",
+          "fraud_risk:3.1#2"
+        ],
+        "context_words": 788
+      },
+      {
+        "id": "fr05",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:3.1#1",
+          "customer_liability:5#2",
+          "digital_lending:26",
+          "fraud_risk:3.1#2",
+          "fraud_risk:3.3"
+        ],
+        "context_words": 875
+      },
+      {
+        "id": "fr06",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.1#2",
+          "fraud_risk:4.1#3",
+          "fraud_risk:4.1#1",
+          "fraud_risk:3.1#1",
+          "fraud_risk:3.1#2"
+        ],
+        "context_words": 788
+      },
+      {
+        "id": "fr07",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.4",
+          "fraud_risk:6.3#1",
+          "fraud_risk:8.2",
+          "fraud_risk:4.1#3",
+          "fraud_risk:4.1#1"
+        ],
+        "context_words": 754
+      },
+      {
+        "id": "fr08",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:5.1",
+          "fraud_risk:5.2",
+          "fraud_risk:4.1#3",
+          "fraud_risk:7.2",
+          "fraud_risk:1.3"
+        ],
+        "context_words": 488
+      },
+      {
+        "id": "fr09",
+        "kind": "table",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:5.1",
+          "fraud_risk:6.3#1",
+          "fraud_risk:7.2",
+          "digital_lending:11#2",
+          "fraud_risk:introduction"
+        ],
+        "context_words": 686
+      },
+      {
+        "id": "fr10",
+        "kind": "numeric",
+        "recall": 0.0,
+        "hit1": 0.0,
+        "rr": 0.0,
+        "retrieved": [
+          "fraud_risk:4.1#2",
+          "fraud_risk:2.1#2",
+          "fraud_risk:7.2",
+          "fraud_risk:9.2",
+          "fraud_risk:5.1"
+        ],
+        "context_words": 697
+      },
+      {
+        "id": "fr11",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:6.4",
+          "fraud_risk:4.1#1",
+          "fraud_risk:5.1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:7.1"
+        ],
+        "context_words": 788
+      },
+      {
+        "id": "fr12",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:8.1",
+          "fraud_risk:4.1#1",
+          "fraud_risk:8.3",
+          "digital_lending:27",
+          "fraud_risk:3.3"
+        ],
+        "context_words": 770
+      },
+      {
+        "id": "fr13",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:8.4",
+          "fraud_risk:6.3#1",
+          "fraud_risk:4.1#2",
+          "fraud_risk:6.4",
+          "fraud_risk:3.1#1"
+        ],
+        "context_words": 924
+      },
+      {
+        "id": "fr14",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:9.1",
+          "fraud_risk:9.2",
+          "customer_liability:5#2",
+          "fraud_risk:6.3#1",
+          "customer_liability:8"
+        ],
+        "context_words": 839
+      },
+      {
+        "id": "fr15",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:7.1",
+          "fraud_risk:7.2",
+          "fraud_risk:6.1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:6.3#1"
+        ],
+        "context_words": 735
+      },
+      {
+        "id": "fr16",
+        "kind": "paraphrase",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:8.2",
+          "fraud_risk:4.1#1",
+          "fraud_risk:4.1#3",
+          "fraud_risk:7.2",
+          "fraud_risk:4.1#2"
+        ],
+        "context_words": 737
+      },
+      {
+        "id": "fr17",
+        "kind": "numeric",
+        "recall": 1.0,
+        "hit1": 0.0,
+        "rr": 0.5,
+        "retrieved": [
+          "fraud_risk:5.1",
+          "fraud_risk:4.3",
+          "fraud_risk:2.1#2",
+          "fraud_risk:6.3#1",
+          "fraud_risk:introduction"
+        ],
+        "context_words": 790
+      },
+      {
+        "id": "fr18",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:6.3#2",
+          "fraud_risk:5.1",
+          "fraud_risk:Appendix#2",
+          "fraud_risk:2.1#2",
+          "fraud_risk:6.1"
+        ],
+        "context_words": 1079
+      },
+      {
+        "id": "fr19",
+        "kind": "multi",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:4.5",
+          "fraud_risk:4.4",
+          "fraud_risk:8.2",
+          "fraud_risk:4.1#1",
+          "fraud_risk:4.1#3"
+        ],
+        "context_words": 751
+      },
+      {
+        "id": "fr20",
+        "kind": "lookup",
+        "recall": 1.0,
+        "hit1": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud_risk:2.2",
+          "fraud_risk:2.1#2",
+          "fraud_risk:5.1",
+          "fraud_risk:2.1#3",
+          "fraud_risk:5.2"
+        ],
+        "context_words": 599
+      }
+    ],
+    "chunks": 108,
+    "ms_per_query": 15.3
+  }
+}

@@ -1,0 +1,2096 @@
+{
+  "system": "grounded-clause",
+  "config": {
+    "chunking": "clause",
+    "retriever": "hybrid",
+    "mode": "grounded",
+    "model": "claude-sonnet-5-5",
+    "judge": "claude-haiku-5-5"
+  },
+  "metrics": {
+    "questions": 65,
+    "ungraded": 0,
+    "accuracy": 0.945,
+    "accuracy_incl_partial": 0.945,
+    "fact_check_pass": 0.909,
+    "judge_fact_agreement": 0.964,
+    "wrongly_refused": 0.055,
+    "abstained_on_unanswerable": 1.0,
+    "citation_hit": 0.981,
+    "answers_with_citations": 1.0,
+    "needed_retry": 0.015,
+    "unverified_fallbacks": 0.015,
+    "avg_tokens": 2972,
+    "avg_seconds": 2.65,
+    "by_kind": {
+      "lookup": 1.0,
+      "multi": 1.0,
+      "numeric": 0.938,
+      "paraphrase": 0.938,
+      "table": 0.75
+    }
+  },
+  "rows": [
+    {
+      "id": "cl01",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "You bear no loss. If the breach lies elsewhere in the system (not with you or the bank) and you report within 3 working days of receiving the bank's communication, your liability is zero. Working days are counted per your home branch's schedule, excluding the date you received the communication. This assumes you weren't negligent, such as by sharing your credentials. The bank must credit the amount to your account within 10 working days of your notification.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:8",
+          "quote": "Within 3 working days | Zero liability"
+        },
+        {
+          "chunk_id": "customer_liability:8",
+          "quote": "where the deficiency lies neither with the bank nor with the customer but lies elsewhere in the system"
+        },
+        {
+          "chunk_id": "customer_liability:7#1",
+          "quote": "where he has shared the payment credentials, the customer will bear the entire loss until he reports the unauthorised transaction to the bank."
+        },
+        {
+          "chunk_id": "customer_liability:9",
+          "quote": "the bank shall credit (shadow reversal) the amount involved in the unauthorised electronic transaction to the customer’s account within 10 working days"
+        }
+      ],
+      "retrieved": [
+        "customer_liability:7#1",
+        "customer_liability:8",
+        "customer_liability:9",
+        "customer_liability:10",
+        "fraud_risk:4.1#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": false,
+      "judge": "correct",
+      "judge_reason": "The answer correctly applies the third-party breach zero-liability provision: reporting within three working days of the bank's communication yields zero liability, so the user's two-day report qualifies. The extra details (home branch working-day calendar, 10-working-day credit timeline) aren't in the excerpt but don't contradict it.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3021,
+      "seconds": 2.92
+    },
+    {
+      "id": "cl02",
+      "type": "answerable",
+      "kind": "table",
+      "mode": "grounded",
+      "answer": "A BSBD account holder's liability is capped at the transaction value or ₹5,000, whichever is lower. Five working days falls in the 4–7 working day window, so the most they can lose per transaction is ₹5,000.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:7#1",
+          "quote": "the per transaction liability of the customer shall be limited to the transaction value or the amount mentioned in Table 1 , whichever is lower."
+        },
+        {
+          "chunk_id": "customer_liability:7#2",
+          "quote": "• BSBD Accounts | 5,000"
+        },
+        {
+          "chunk_id": "customer_liability:8",
+          "quote": "Within 4 to 7 working days | The transaction value or the amount mentioned in Table 1 , whichever is lower"
+        }
+      ],
+      "retrieved": [
+        "customer_liability:8",
+        "customer_liability:7#1",
+        "customer_liability:7#2",
+        "customer_liability:9",
+        "fraud_risk:4.1#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly identifies the 4–7 working-day delay window for a third-party breach and the BSBD cap of ₹5,000, with liability limited to the lower of transaction value or ₹5,000, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3066,
+      "seconds": 3.68
+    },
+    {
+      "id": "cl03",
+      "type": "answerable",
+      "kind": "table",
+      "mode": "grounded",
+      "answer": "Reporting six working days after the alert falls in the 4–7 working day window. The customer's per-transaction liability is the transaction value or the Table 1 amount, whichever is lower. For a credit card with a limit above Rs 5 lakh, the Table 1 amount is ₹25,000. So the maximum is ₹25,000 per transaction, or the transaction value if that is lower.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:8",
+          "quote": "Within 4 to 7 working days | The transaction value or the amount mentioned in Table 1 , whichever is lower"
+        },
+        {
+          "chunk_id": "customer_liability:7#2",
+          "quote": "• All other Current/ Cash Credit/ Overdraft Accounts • Credit cards with limit above Rs.5 lakh | 25,000"
+        }
+      ],
+      "retrieved": [
+        "customer_liability:7#2",
+        "customer_liability:7#1",
+        "customer_liability:8",
+        "customer_liability:9",
+        "customer_liability:6"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly identifies the 4–7 working day window for the delayed-reporting case, applies the Table 1 cap of ₹25,000 for credit cards with limits above ₹5 lakh (the customer's ₹8 lakh limit), and correctly states the liability is the lower of the transaction value or ₹25,000.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2937,
+      "seconds": 2.34
+    },
+    {
+      "id": "cl04",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "The bank must credit (shadow reversal) the amount involved in the unauthorised transaction to the customer's account within 10 working days from the date the customer notifies it, without waiting for any insurance claim to settle. The credit is value dated as of the date of the unauthorised transaction.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:9",
+          "quote": "the bank shall credit (shadow reversal) the amount involved in the unauthorised electronic transaction to the customer’s account within 10 working days from the date of such notification by the customer"
+        },
+        {
+          "chunk_id": "customer_liability:9",
+          "quote": "The credit shall be value dated to be as of the date of the unauthorised transaction."
+        }
+      ],
+      "retrieved": [
+        "customer_liability:9",
+        "customer_liability:7#1",
+        "customer_liability:8",
+        "customer_liability:10",
+        "customer_liability:5#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states the 10 working day limit from customer notification, the shadow reversal, no waiting for insurance claim, and the value dating to the transaction date, all matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3161,
+      "seconds": 3.4
+    },
+    {
+      "id": "cl05",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "A bank must resolve the complaint and establish the customer's liability within the time in its Board-approved policy, which can't be more than 90 days from receiving the complaint. If the bank can't do this within 90 days, it must pay the customer the compensation prescribed in paragraphs 6 to 9.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:10",
+          "quote": "but not exceeding 90 days from the date of receipt of the complaint"
+        },
+        {
+          "chunk_id": "customer_liability:10",
+          "quote": "where it is unable to resolve the complaint or determine the customer liability, if any, within 90 days, the compensation as prescribed in paragraphs 6 to 9 is paid to the customer"
+        }
+      ],
+      "retrieved": [
+        "customer_liability:10",
+        "customer_liability:9",
+        "customer_liability:7#1",
+        "customer_liability:6",
+        "customer_liability:8"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer states the key requirement accurately: resolution and liability determination within the Board-approved policy time, capped at 90 days from receipt of complaint, and compensation under paragraphs 6-9 if not resolved within 90 days.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2720,
+      "seconds": 3.04
+    },
+    {
+      "id": "cl06",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "The bank has to prove it. The burden of proving customer liability in unauthorised electronic banking transactions lies on the bank.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:12",
+          "quote": "The burden of proving customer liability in case of unauthorised electronic banking transactions shall lie on the bank."
+        }
+      ],
+      "retrieved": [
+        "customer_liability:7#1",
+        "customer_liability:6",
+        "customer_liability:12",
+        "customer_liability:9",
+        "customer_liability:2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that the bank bears the burden of proving customer liability for unauthorised electronic banking transactions, matching the reference text.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2239,
+      "seconds": 5.34
+    },
+    {
+      "id": "cl07",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "Sharing your OTP counts as negligence (sharing payment credentials), so you bear the entire loss until you report the unauthorised transaction to the bank. Any loss after you report it is borne by the bank, so report immediately.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:7#1",
+          "quote": "In cases where the loss is due to negligence by a customer, such as where he has shared the payment credentials, the customer will bear the entire loss until he reports the unauthorised transaction to the bank."
+        },
+        {
+          "chunk_id": "customer_liability:7#1",
+          "quote": "Any loss occurring after the reporting of the unauthorised transaction shall be borne by the bank."
+        }
+      ],
+      "retrieved": [
+        "customer_liability:5#2",
+        "customer_liability:7#1",
+        "fraud_risk:4.1#3",
+        "customer_liability:Annex#2",
+        "fraud_risk:4.1#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that sharing payment credentials (like an OTP) is negligence under which the customer bears the entire loss until reporting, and that losses after reporting are borne by the bank, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3992,
+      "seconds": 4.3
+    },
+    {
+      "id": "cl08",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "Working days are counted as per the working schedule of the customer's home branch, excluding the date on which the customer receives the bank's communication about the transaction.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:8",
+          "quote": "The number of working days mentioned in Table 2 shall be counted as per the working schedule of the home branch of the customer excluding the date of receiving the communication."
+        }
+      ],
+      "retrieved": [
+        "customer_liability:8",
+        "customer_liability:7#1",
+        "customer_liability:6",
+        "customer_liability:9",
+        "customer_liability:10"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states that working days are counted per the home branch's working schedule and exclude the date of receiving the communication, matching the reference text.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2602,
+      "seconds": 1.43
+    },
+    {
+      "id": "cl09",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "Yes, partly. Banks may decline to offer electronic transaction facilities to customers who don't provide a mobile number, but ATM cash withdrawals are the exception and cannot be withheld on this ground.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:5#2",
+          "quote": "The banks may not offer facility of electronic transactions, other than ATM cash withdrawals, to customers who do not provide mobile numbers to the bank."
+        }
+      ],
+      "retrieved": [
+        "customer_liability:5#2",
+        "customer_liability:12",
+        "customer_liability:3",
+        "customer_liability:2",
+        "customer_liability:13"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that banks may withhold electronic transaction facilities (other than ATM cash withdrawals) from customers without a mobile number, matching the reference text; the opening \"Yes, partly\" framing is slightly awkward but the substance is accurate.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2683,
+      "seconds": 1.66
+    },
+    {
+      "id": "cl10",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "Banks must ask customers to mandatorily register for SMS alerts and, wherever available, also register for e-mail alerts. SMS alerts must always be sent, while e-mail alerts are sent wherever registered.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:5#2",
+          "quote": "Banks must ask their customers to mandatorily register for SMS alerts and wherever available register for e-mail alerts, for electronic banking transactions."
+        },
+        {
+          "chunk_id": "customer_liability:5#2",
+          "quote": "The SMS alerts shall mandatorily be sent to the customers, while email alerts may be sent, wherever registered."
+        }
+      ],
+      "retrieved": [
+        "customer_liability:5#2",
+        "customer_liability:4",
+        "customer_liability:11",
+        "customer_liability:13",
+        "customer_liability:3"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states that banks must ask customers to mandatorily register for SMS alerts and, wherever available, register for e-mail alerts, and that SMS alerts are mandatory while e-mail alerts are sent where registered.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3170,
+      "seconds": 2.11
+    },
+    {
+      "id": "cl11",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "No. While a complaint is being resolved, the bank must ensure that, for a debit card or bank account, the customer does not suffer loss of interest. The bank must resolve the complaint within its Board-approved timeline, which is no more than 90 days. If it can't resolve the complaint or decide your liability within 90 days, it must pay you the compensation set out in paragraphs 6 to 9.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:10",
+          "quote": "in case of debit card/ bank account, the customer does not suffer loss of interest"
+        },
+        {
+          "chunk_id": "customer_liability:10",
+          "quote": "not exceeding 90 days from the date of receipt of the complaint"
+        },
+        {
+          "chunk_id": "customer_liability:10",
+          "quote": "where it is unable to resolve the complaint or determine the customer liability, if any, within 90 days, the compensation as prescribed in paragraphs 6 to 9 is paid to the customer"
+        }
+      ],
+      "retrieved": [
+        "customer_liability:Annex#2",
+        "customer_liability:10",
+        "customer_liability:Annex#1",
+        "customer_liability:2",
+        "customer_liability:14"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that the customer does not lose interest on a debit card/bank account during complaint resolution, and accurately gives the 90-day outer limit and compensation obligation if unresolved.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3364,
+      "seconds": 3.51
+    },
+    {
+      "id": "cl12",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "If you report a third-party breach fraud beyond 7 working days after receiving the bank's communication, your liability is not fixed by RBI's table. It is determined by the bank's Board-approved policy. Working days are counted per your home branch's schedule, excluding the day you received the communication.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:8",
+          "quote": "Beyond 7 working days | As per bank’s Board approved policy"
+        },
+        {
+          "chunk_id": "customer_liability:7#2",
+          "quote": "if the delay in reporting is beyond seven working days , the customer liability shall be determined as per the bank’s Board approved policy."
+        },
+        {
+          "chunk_id": "customer_liability:8",
+          "quote": "The number of working days mentioned in Table 2 shall be counted as per the working schedule of the home branch of the customer excluding the date of receiving the communication."
+        }
+      ],
+      "retrieved": [
+        "customer_liability:8",
+        "customer_liability:7#1",
+        "fraud_risk:4.2",
+        "customer_liability:7#2",
+        "customer_liability:6"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that beyond 7 working days the customer's liability is determined by the bank's Board-approved policy rather than the RBI table, and correctly notes the working-day counting rule (home branch schedule, excluding the date of communication).",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2962,
+      "seconds": 2.72
+    },
+    {
+      "id": "cl13",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "The Standing Committee on Customer Service in each bank periodically reviews unauthorised electronic banking transactions reported by customers or otherwise, along with the action taken and the working of the grievance redress mechanism. The bank's internal auditors must also review all such transactions.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "customer_liability:13",
+          "quote": "The Standing Committee on Customer Service in each bank shall periodically review the unauthorised electronic banking transactions reported by customers or otherwise"
+        },
+        {
+          "chunk_id": "customer_liability:13",
+          "quote": "All such transactions shall be reviewed by the bank’s internal auditors."
+        }
+      ],
+      "retrieved": [
+        "customer_liability:13",
+        "customer_liability:5#1",
+        "customer_liability:5#2",
+        "customer_liability:4",
+        "customer_liability:preamble"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly identifies the Standing Committee on Customer Service as the committee that periodically reviews unauthorised electronic banking transactions reported by customers, matching the reference text.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2886,
+      "seconds": 2.7
+    },
+    {
+      "id": "cl14",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "The excerpts don't say whether a delay in reporting matters when the fraud was caused by the bank's own negligence. They only cover the timeline for crediting the amount back after you notify the bank. They don't include the rules on how reporting delay affects your liability.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "fraud_risk:4.1#1",
+        "fraud_risk:6.3#1",
+        "fraud_risk:4.1#2",
+        "customer_liability:9",
+        "fraud_risk:7.2"
+      ],
+      "facts_ok": false,
+      "citation_hit": false,
+      "judge": "incorrect",
+      "judge_reason": "The reference explicitly states that zero liability arises for bank-side contributory fraud/negligence/deficiency irrespective of whether the customer reports the transaction, so the answer wrongly says the excerpts don't cover this and misdescribes the content.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2968,
+      "seconds": 3.0
+    },
+    {
+      "id": "dl01",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "The cooling-off period is set by the RE's Board in its loan policy, but it cannot be less than one day. During it, the borrower can exit by paying the principal and proportionate APR without penalty, though the RE may keep a reasonable one-time processing fee if disclosed upfront in the KFS.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:10",
+          "quote": "The cooling off period shall be determined by the Board of the RE as laid down in their loan policy, subject to the period so determined not being less than one day."
+        },
+        {
+          "chunk_id": "digital_lending:10",
+          "quote": "RE may retain a reasonable one-time processing fee, if the customer exits the loan during the cooling-off period."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:10",
+        "digital_lending:26",
+        "digital_lending:7",
+        "fraud_risk:4.4",
+        "digital_lending:Annex II#1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states the minimum cooling-off period is one day, set by the RE's Board in its loan policy, and accurately summarizes the penalty-free exit and processing fee conditions.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2612,
+      "seconds": 4.13
+    },
+    {
+      "id": "dl02",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "No. Regulated entities must ensure that their digital lending apps, and those of their lending service providers, do not access mobile phone resources such as the contact list, files and media, call logs or telephony functions. The only exception is one-time access to the camera, microphone, location or another facility needed for on-boarding/KYC, and only with your explicit consent.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:12",
+          "quote": "RE shall also ensure that DLA of RE/LSP desist from accessing mobile phone resources like file and media, contact list, call logs, telephony functions, etc."
+        },
+        {
+          "chunk_id": "digital_lending:12",
+          "quote": "A one-time access can be taken for camera, microphone, location or any other facility necessary for the purpose of on-boarding/ KYC requirements only, with the explicit consent of the borrower."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:12",
+        "digital_lending:Annex I",
+        "digital_lending:13#1",
+        "digital_lending:4#2",
+        "digital_lending:14"
+      ],
+      "facts_ok": false,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly says no, states that REs must ensure DLAs and LSP apps desist from accessing contact list, files/media, call logs and telephony functions, and accurately notes the one-time KYC/on-boarding exception for camera, microphone, location with explicit consent.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2882,
+      "seconds": 2.7
+    },
+    {
+      "id": "dl03",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "No. Disbursal must be made into the borrower's own bank account. The only exceptions are disbursals under a statutory or regulatory mandate, money flowing between REs in co-lending, and disbursals for a specific end use, which must go directly to the end-beneficiary's account. The RE must ensure that disbursal is never made to a third-party account, including the LSP's account.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:9#1",
+          "quote": "Disbursement of loan by the RE shall always be made into the bank account of the borrower except for disbursals covered exclusively under statutory or regulatory mandate"
+        },
+        {
+          "chunk_id": "digital_lending:9#1",
+          "quote": "RE shall ensure that in no case, disbursal is made to a third-party account, including the accounts of LSP, except as provided for in these Directions."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:9#1",
+        "digital_lending:4#2",
+        "digital_lending:9#2",
+        "digital_lending:18",
+        "digital_lending:6#1"
+      ],
+      "facts_ok": false,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly says no, disbursal must go to the borrower's own account, lists the exceptions (statutory/regulatory mandate, co-lending flows, specific end-use disbursals to end-beneficiary), and states that disbursal to an LSP account is prohibited, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2804,
+      "seconds": 2.94
+    },
+    {
+      "id": "dl04",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "If data is processed outside India, it must be deleted from the servers outside India and brought back to India within 24 hours of processing.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:13#2",
+          "quote": "in case the data is processed outside India, the same shall be deleted from servers outside India and brought back to India within 24 hours of processing."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:13#2",
+        "digital_lending:12",
+        "digital_lending:13#1",
+        "digital_lending:11#2",
+        "digital_lending:10"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer states the key requirement accurately: data processed outside India must be deleted from overseas servers and brought back to India within 24 hours of processing, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2590,
+      "seconds": 1.78
+    },
+    {
+      "id": "dl05",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "Yes. If you exit during the cooling-off period, you pay the principal and proportionate APR without penalty, but the lender may retain a reasonable one-time processing fee. If applicable, this fee must be disclosed to you upfront in the KFS.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:10",
+          "quote": "RE may retain a reasonable one-time processing fee, if the customer exits the loan during the cooling-off period."
+        },
+        {
+          "chunk_id": "digital_lending:10",
+          "quote": "This, if applicable, shall be disclosed to the customer upfront in KFS."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:10",
+        "digital_lending:Annex II#1",
+        "customer_liability:9",
+        "fraud_risk:4.4",
+        "digital_lending:Annex II#3"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that the lender may retain a reasonable one-time processing fee on exit during the cooling-off period, that the borrower pays principal and proportionate APR without penalty, and that the fee must be disclosed upfront in the KFS.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2907,
+      "seconds": 1.85
+    },
+    {
+      "id": "dl06",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "Under the Digital Lending Directions, if you get no reply from the regulated entity within 30 days of it receiving your complaint, you can lodge a complaint on the RBI's CMS portal under the RB-IOS. You can also send a physical complaint to the Centralised Receipt and Processing Centre in Chandigarh. You can escalate sooner if the complaint is rejected wholly or partly, or if you are not satisfied with the reply.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:11#2",
+          "quote": "the borrower has not received any reply within 30 days of receipt of complaint by the RE, the said borrower can lodge a complaint over the Complaint Management System (CMS) portal"
+        }
+      ],
+      "retrieved": [
+        "digital_lending:11#2",
+        "customer_liability:10",
+        "customer_liability:8",
+        "digital_lending:10",
+        "digital_lending:11#1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states the 30-day threshold for no reply, the CMS portal under RB-IOS, the physical complaint option, and the earlier escalation if the complaint is rejected or the borrower is unsatisfied, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2674,
+      "seconds": 2.18
+    },
+    {
+      "id": "dl07",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "The total DLG cover on an outstanding portfolio, specified upfront, must not exceed 5% of the total amount disbursed from that loan portfolio at any given time. For implicit guarantees, the DLG Provider must not bear performance risk above 5% of the underlying loan portfolio.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:23",
+          "quote": "the total amount of DLG cover on any outstanding portfolio which is specified upfront shall not exceed five per cent of the total amount disbursed out of that loan portfolio at any given time"
+        },
+        {
+          "chunk_id": "digital_lending:23",
+          "quote": "the DLG Provider shall not bear performance risk of more than the equivalent amount of five per cent of the underlying loan portfolio"
+        }
+      ],
+      "retrieved": [
+        "digital_lending:Annex II#2",
+        "digital_lending:23",
+        "digital_lending:4#1",
+        "digital_lending:Annex II#3",
+        "digital_lending:Annex II#1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer states the 5% cap on DLG cover relative to the total amount disbursed from the loan portfolio at any given time, and correctly covers the implicit guarantee case, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3153,
+      "seconds": 2.74
+    },
+    {
+      "id": "dl08",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "A regulated entity must invoke the DLG within a maximum overdue period of 120 days, unless the borrower makes good the loan dues before that.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:26",
+          "quote": "RE shall invoke DLG within a maximum overdue period of 120 days, unless the loan dues are made good by the borrower before that."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:26",
+        "digital_lending:4#1",
+        "digital_lending:10",
+        "digital_lending:28",
+        "digital_lending:18"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer states the 120-day maximum overdue period for invoking DLG and the exception where borrower makes good the dues before that, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2378,
+      "seconds": 1.7
+    },
+    {
+      "id": "dl09",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "A regulated entity may accept a DLG only in one or more of these forms: cash deposited with the RE; a Fixed Deposit kept with a Scheduled Commercial Bank with a lien marked in favour of the RE; or a Bank Guarantee in favour of the RE.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:22",
+          "quote": "RE shall accept DLG only in one or more of the following forms:"
+        },
+        {
+          "chunk_id": "digital_lending:22",
+          "quote": "Cash deposited with the RE;"
+        },
+        {
+          "chunk_id": "digital_lending:22",
+          "quote": "Fixed Deposit maintained with a Scheduled Commercial Bank with a lien marked in favour of the RE;"
+        },
+        {
+          "chunk_id": "digital_lending:22",
+          "quote": "Bank Guarantee in favour of the RE."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:4#1",
+        "digital_lending:18",
+        "digital_lending:22",
+        "digital_lending:28",
+        "digital_lending:6#1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer lists all three permitted forms (cash deposited with the RE, fixed deposit with a Scheduled Commercial Bank with lien in favour of RE, and bank guarantee in favour of RE) and correctly notes they are exclusive, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2659,
+      "seconds": 2.32
+    },
+    {
+      "id": "dl10",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "No. A regulated entity (RE) may not enter into DLG arrangements for credit cards, as defined under the Credit Card and Debit Card – Issuance and Conduct Directions, 2022. The same bar applies to revolving credit facilities offered through digital lending channels.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:20",
+          "quote": "RE shall not enter into DLG arrangements for revolving credit facilities offered through digital lending channel and credit cards"
+        }
+      ],
+      "retrieved": [
+        "digital_lending:4#1",
+        "digital_lending:18",
+        "digital_lending:20",
+        "digital_lending:28",
+        "digital_lending:29#1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that REs cannot enter into DLG arrangements for credit cards (as defined in the 2022 Credit Card and Debit Card Directions) and also covers revolving credit facilities via digital lending channels, matching the reference's para 20(i).",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2845,
+      "seconds": 1.98
+    },
+    {
+      "id": "dl11",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "A regulated entity may enter into DLG arrangements only with a Lending Service Provider (LSP) or another RE engaged as an LSP. An LSP that provides the DLG must be incorporated as a company under the Companies Act, 2013.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:18",
+          "quote": "RE may enter into DLG arrangements only with a LSP/ other RE engaged as a LSP. Further, the LSP providing DLG shall be incorporated as a company under the Companies Act, 2013."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:4#1",
+        "digital_lending:18",
+        "digital_lending:28",
+        "digital_lending:3",
+        "digital_lending:20"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states that the RE may enter DLG arrangements only with an LSP or another RE engaged as an LSP, and that the LSP must be incorporated as a company under the Companies Act, 2013, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2629,
+      "seconds": 2.3
+    },
+    {
+      "id": "dl12",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "Yes. Where an LSP has agreements with multiple REs, it must give a digital view on the app of all loan offers matching your request, and must also disclose the names of the unmatched lenders. The view must show each RE's name, loan amount and tenor, APR, monthly repayment and penal charges (if applicable) so you can compare fairly, with a KFS link for each RE.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:6#1",
+          "quote": "LSP shall provide a digital view of all the loan offers matching the borrower’s request on the DLA which meets the requirement of the borrower."
+        },
+        {
+          "chunk_id": "digital_lending:6#1",
+          "quote": "The name of the unmatched lenders shall also be disclosed in the digital view."
+        },
+        {
+          "chunk_id": "digital_lending:6#1",
+          "quote": "A link to the KFS shall also be provided in respect of each of the RE."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:6#1",
+        "digital_lending:6#2",
+        "fraud_risk:8.2",
+        "digital_lending:Annex I",
+        "digital_lending:4#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states that the LSP must show a digital view of all matching offers and disclose names of unmatched lenders, and it lists the required comparison fields (RE name, amount, tenor, APR, monthly repayment, penal charges) plus the KFS link per RE, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2763,
+      "seconds": 3.33
+    },
+    {
+      "id": "dl13",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "No. A regulated entity must ensure there is no automatic increase in your credit limit unless you have made an explicit request. The request must also be evaluated and kept on record.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:7",
+          "quote": "RE shall ensure that there is no automatic increase in credit limit unless an explicit request is received, evaluated and kept on record from the borrower for such increase."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:7",
+        "customer_liability:7#2",
+        "digital_lending:6#1",
+        "customer_liability:9",
+        "digital_lending:10"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that the RE must ensure no automatic credit limit increase unless an explicit borrower request is received, evaluated, and kept on record, matching the reference text.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2735,
+      "seconds": 2.3
+    },
+    {
+      "id": "dl14",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "Before extending any loan, the regulated entity must obtain information on the borrower's economic profile to assess creditworthiness, which at a minimum includes age, occupation and income details. This must be kept on record for audit purposes.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:7",
+          "quote": "including, at a minimum, age, occupation and income details. The same shall be kept on record for audit purposes."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:7",
+        "digital_lending:12",
+        "digital_lending:17#2",
+        "digital_lending:16",
+        "digital_lending:6#1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states the minimum information (age, occupation, and income details) required to assess creditworthiness before extending any loan and the audit record-keeping requirement, matching the reference text.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2985,
+      "seconds": 1.84
+    },
+    {
+      "id": "dl15",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "The RE's Chief Compliance Officer, or another official designated by the RE's Board, must certify that the DLA data submitted on the CIMS portal is correct. They must also certify that the DLAs comply with all extant regulatory instructions, including these Directions.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:17#1",
+          "quote": "The Chief Compliance Officer of the RE or any other official designated by the Board of the RE for the purpose shall certify that the data on DLAs submitted by them on the CIMS portal is correct"
+        }
+      ],
+      "retrieved": [
+        "digital_lending:17#2",
+        "digital_lending:17#1",
+        "digital_lending:Annex I",
+        "digital_lending:17#3",
+        "digital_lending:4#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly identifies the Chief Compliance Officer of the RE or another official designated by the Board as the certifying authority, and accurately states what is certified (data correctness and DLA compliance with regulatory instructions).",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2862,
+      "seconds": 4.0
+    },
+    {
+      "id": "dl16",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "No. The excerpts say the DLA data the RE submits on CIMS is published on RBI's website automatically, and RBI does not verify or validate it. The RE must ensure the information is correct and timely, and the RE deals directly with all customer issues and grievances about DLAs.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:17#2",
+          "quote": "the data, as submitted by the RE on CIMS, shall be published on the website of RBI in an automated manner and RBI shall not verify/ validate the data submitted on CIMS"
+        },
+        {
+          "chunk_id": "digital_lending:17#2",
+          "quote": "All issues and grievances of customers concerning DLAs shall be addressed and dealt with by the RE directly."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:17#2",
+        "digital_lending:Annex I",
+        "digital_lending:Annex III",
+        "digital_lending:17#1",
+        "digital_lending:8#1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly says no, noting that CIMS data is published automatically, RBI does not verify or validate it, and the RE is responsible for correctness and handling grievances; it captures the key point that listing is not RBI approval, though it omits the explicit \"no registration/endorsement\" wording in para vi.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3190,
+      "seconds": 2.11
+    },
+    {
+      "id": "dl17",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "Generally no. The RE must ensure that no biometric data is stored or collected by the RE and the LSP, unless it is allowed under extant statutory guidelines.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:13#1",
+          "quote": "RE shall ensure that no biometric data is stored/ collected by the RE and LSP, unless allowed under extant statutory guidelines."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:13#1",
+        "digital_lending:12",
+        "digital_lending:4#2",
+        "fraud_risk:4.2",
+        "digital_lending:14"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately conveys the reference requirement that no biometric data may be stored or collected by the RE or LSP unless allowed under extant statutory guidelines, and correctly says \"generally no.\"",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2708,
+      "seconds": 2.24
+    },
+    {
+      "id": "dl18",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "LSPs with DLG arrangements must publish the total number of portfolios, and the amount of each portfolio on which DLG has been offered, on their website every month. Each month's disclosure is due no later than seven working days after that month ends.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:27",
+          "quote": "Disclosure under para (i) above shall be made on a monthly basis, with the disclosure for any given month to be provided no later than seven (7) working days following the conclusion of that month."
+        },
+        {
+          "chunk_id": "digital_lending:27",
+          "quote": "publish on their website the total number of portfolios and the respective amount of each portfolio on which DLG has been offered"
+        }
+      ],
+      "retrieved": [
+        "digital_lending:27",
+        "digital_lending:4#1",
+        "digital_lending:18",
+        "digital_lending:19#2",
+        "digital_lending:28"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states monthly publication on the LSP's website with the disclosure due within seven working days after month-end, matching the reference text.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2559,
+      "seconds": 1.81
+    },
+    {
+      "id": "dl19",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "No. EMI programmes on credit cards are governed by Para 6(b)(iii) of the Master Direction on Credit Card and Debit Card (2022) and are not covered by the Digital Lending Directions. Other loan products on credit cards that para doesn't cover are governed by these Directions. The Directions also apply to all loans on debit cards, including EMI programmes.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:29#1",
+          "quote": "EMI programmes on Credit Card are governed specifically by Para 6(b)(iii) of the Master Direction on Credit Card and Debit Card – Issuance and Conduct, 2022"
+        },
+        {
+          "chunk_id": "digital_lending:29#1",
+          "quote": "Such transactions shall not be covered under these Directions."
+        },
+        {
+          "chunk_id": "digital_lending:29#1",
+          "quote": "other loan products offered on Credit Cards which are not covered/ envisaged under the aforesaid para of the Master Direction shall be governed by the stipulations laid down under these Directions"
+        }
+      ],
+      "retrieved": [
+        "digital_lending:29#1",
+        "digital_lending:20",
+        "digital_lending:4#1",
+        "digital_lending:1#1",
+        "digital_lending:16"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that EMI programmes on credit cards are governed by Para 6(b)(iii) of the Credit Card and Debit Card Master Direction and are not covered by the Digital Lending Directions, and adds the accurate nuance that other credit card loan products and debit card EMI programmes are covered.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3419,
+      "seconds": 2.74
+    },
+    {
+      "id": "dl20",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "When a loan is in default and a recovery agent is assigned (or the assigned agent is changed), the RE must tell the borrower the particulars of the authorised recovery agent by email/SMS before the agent contacts the borrower for recovery.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:8#2",
+          "quote": "In case of a loan default, when a recovery agent is assigned for recovery or there is a change in the recovery agent already assigned, the particulars of such recovery agent authorised to approach the borrower for recovery shall be communicated to the borrower through email/ SMS before the recovery agent contacts the borrower for recovery."
+        }
+      ],
+      "retrieved": [
+        "digital_lending:8#2",
+        "digital_lending:9#2",
+        "digital_lending:17#2",
+        "digital_lending:6#1",
+        "digital_lending:4#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states the requirement from clause 8(v): the RE must communicate the recovery agent's particulars to the borrower via email/SMS before the agent contacts the borrower, including on reassignment.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2897,
+      "seconds": 2.34
+    },
+    {
+      "id": "dl21",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "The lender (the Regulated Entity) pays the LSP's fees, charges and reimbursements directly. The LSP cannot charge or collect them from you separately. For cash recoveries of delinquent loans, the LSP also cannot charge you for them, directly or indirectly, from the recovery proceeds.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "digital_lending:9#1",
+          "quote": "RE shall ensure that any fees, charges, reimbursements, etc. payable to LSP are paid directly by the RE and are not charged to or collected from the borrowers separately by LSP."
+        },
+        {
+          "chunk_id": "digital_lending:9#2",
+          "quote": "are not charged by LSP to the borrower either directly or indirectly from the recovery proceeds"
+        }
+      ],
+      "retrieved": [
+        "digital_lending:4#2",
+        "digital_lending:9#2",
+        "digital_lending:6#1",
+        "digital_lending:9#1",
+        "fraud_risk:4.2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that the RE (lender) pays LSP fees directly and the LSP cannot charge or collect them from the borrower separately, including the cash recovery nuance, matching clause 9(iv) and 9(v).",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2919,
+      "seconds": 2.13
+    },
+    {
+      "id": "fr01",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "A bank must give the person or entity a reasonable time of not less than 21 days to respond to the show cause notice. The bank must also examine their response before declaring them fraudulent.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:2.1#1",
+          "quote": "A reasonable time of not less than 21 days shall be provided to the Persons / Entities on whom the SCN was served to respond to the said SCN."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:2.1#1",
+        "customer_liability:5#2",
+        "fraud_risk:4.1#2",
+        "digital_lending:11#2",
+        "customer_liability:7#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer states the key requirement of a reasonable time of not less than 21 days to respond to the SCN, matching the reference; the added point about examining the response is consistent with the regulation's framework and does not contradict it.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3457,
+      "seconds": 2.45
+    },
+    {
+      "id": "fr02",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "The Board must review the Fraud Risk Management Policy at least once every three years, or more frequently if the Board prescribes.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:2.1#2",
+          "quote": "The Fraud Risk Management Policy shall be reviewed by the Board at least once in three years, or more frequently, as may be prescribed by the Board."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:2.1#3",
+        "fraud_risk:2.1#2",
+        "fraud_risk:2.1#1",
+        "fraud_risk:3.1#2",
+        "customer_liability:7#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states the Board must review the Fraud Risk Management Policy at least once every three years, or more frequently as the Board prescribes, matching the reference text.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2991,
+      "seconds": 2.27
+    },
+    {
+      "id": "fr03",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "The Special Committee of the Board for Monitoring and Follow-up of cases of Frauds (SCBMF) must have at least three Board members: a whole-time director and at least two independent/non-executive directors. It must be headed by one of the independent/non-executive directors.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:2.1#2",
+          "quote": "with a minimum of three members of the Board, consisting of a whole-time director and a minimum of two independent directors / non-executive directors."
+        },
+        {
+          "chunk_id": "fraud_risk:2.1#2",
+          "quote": "The Committee shall be headed by one of the independent directors / non-executive directors."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:2.1#2",
+        "fraud_risk:2.1#3",
+        "fraud_risk:8.3",
+        "customer_liability:13",
+        "fraud_risk:4.3"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states the composition: minimum three Board members, including a whole-time director and at least two independent/non-executive directors, headed by one of the independent/non-executive directors, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2961,
+      "seconds": 2.75
+    },
+    {
+      "id": "fr04",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "The bank must report the red-flagged status on the RBI's CRILC platform immediately, and in any case not later than seven days from the date it classifies the account as red-flagged. The excerpts don't set a different timeline for \"large\" accounts.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:4.1#2",
+          "quote": "shall report the status of the account on the Reserve Bank’s CRILC platform immediately (not later than seven days from date of classification as red-flagged account)"
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:4.1#2",
+        "fraud_risk:4.1#1",
+        "fraud_risk:4.1#3",
+        "fraud_risk:3.1#1",
+        "fraud_risk:3.1#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer states the seven-day deadline from red-flagging for CRILC-threshold accounts, matching both reference clauses, including the \"immediately, not later than seven days\" wording.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2925,
+      "seconds": 4.67
+    },
+    {
+      "id": "fr05",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "The RMCB must prescribe an appropriate Turnaround Time for examining EWS alerts/triggers, preferably not more than 30 days.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:3.1#1",
+          "quote": "Appropriate Turnaround Time (TAT), preferably not more than 30 days, for examination of EWS alerts / triggers shall be prescribed by the RMCB."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:3.1#1",
+        "customer_liability:5#2",
+        "digital_lending:26",
+        "fraud_risk:3.1#2",
+        "fraud_risk:3.3"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer states the preferred maximum TAT of 30 days for examining EWS alerts and correctly notes the RMCB prescribes it, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3088,
+      "seconds": 2.38
+    },
+    {
+      "id": "fr06",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "Ordinarily, the whole process of classifying a red-flagged account as fraud or removing its red-flagged status should be completed within 180 days from the date the account was first reported as red-flagged on the CRILC platform. Cases that stay red-flagged beyond 180 days must be reported to the SCBMF for review with adequate justification, and they are also subject to supervisory review by the RBI.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:4.1#2",
+          "quote": "the entire process of classification of the account as fraud or removal of red-flagged status shall ordinarily be completed within 180 days from the date of first reporting of the account as red-flagged on the CRILC platform."
+        },
+        {
+          "chunk_id": "fraud_risk:4.1#2",
+          "quote": "Cases remaining in red-flagged status beyond 180 days shall be reported to the SCBMF for review with adequate reasoning / justification thereof."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:4.1#2",
+        "fraud_risk:4.1#3",
+        "fraud_risk:4.1#1",
+        "fraud_risk:3.1#1",
+        "fraud_risk:3.1#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer states the 180-day ordinary completion period from first CRILC red-flagging, plus the SCBMF review and RBI supervisory review for cases exceeding it, matching the reference accurately.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3064,
+      "seconds": 2.34
+    },
+    {
+      "id": "fr07",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "Persons or entities classified and reported as fraud, and entities and persons associated with them, are barred from raising funds or getting additional credit from RBI-regulated financial entities for five years. The five years run from the date the defrauded amount is fully repaid. In a compromise settlement, they run from the date the agreed settlement amount is fully paid.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:4.4",
+          "quote": "shall be debarred from raising of funds and / or seeking additional credit facilities from financial entities regulated by RBI, for a period of five years from the date of full repayment of the defrauded amount"
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:4.4",
+        "fraud_risk:6.3#1",
+        "fraud_risk:8.2",
+        "fraud_risk:4.1#3",
+        "fraud_risk:4.1#1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states the five-year debarment from raising funds/additional credit from RBI-regulated entities, running from full repayment of the defrauded amount or the agreed settlement amount in compromise cases, matching the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2868,
+      "seconds": 2.48
+    },
+    {
+      "id": "fr08",
+      "type": "answerable",
+      "kind": "table",
+      "mode": "grounded",
+      "answer": "I couldn't find a verifiable answer to this in the documents.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "fraud_risk:5.1",
+        "fraud_risk:5.2",
+        "fraud_risk:4.1#3",
+        "fraud_risk:7.2",
+        "fraud_risk:1.3"
+      ],
+      "facts_ok": false,
+      "citation_hit": false,
+      "judge": "incorrect",
+      "judge_reason": "The reference text directly answers this: for a private sector bank, fraud of ₹1 crore and above must be reported to both the State/UT Police and the Serious Fraud Investigation Office (SFIO), Ministry of Corporate Affairs, but the assistant said it could not find an answer in the documents.",
+      "verified": false,
+      "attempts": 2,
+      "problems": [
+        [
+          "citation 1: the quote is not an exact copy of text in fraud_risk:5.1"
+        ],
+        [
+          "citation 1: the quote is not an exact copy of text in fraud_risk:5.1"
+        ]
+      ],
+      "tokens": 5265,
+      "seconds": 4.93
+    },
+    {
+      "id": "fr09",
+      "type": "answerable",
+      "kind": "table",
+      "mode": "grounded",
+      "answer": "A public sector bank (or Regional Rural Bank) must lodge the complaint with the CBI when the fraud amount is ₹6 crore and above. Below ₹6 crore, the complaint goes to the State/UT Police.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:5.1",
+          "quote": "(b) ₹6 crore and above | Central Bureau of Investigation (CBI)"
+        },
+        {
+          "chunk_id": "fraud_risk:5.1",
+          "quote": "(a) Below ₹6 crore | State / UT Police"
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:5.1",
+        "fraud_risk:6.3#1",
+        "fraud_risk:7.2",
+        "digital_lending:11#2",
+        "fraud_risk:introduction"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that PSBs must lodge complaints with the CBI for fraud amounts of ₹6 crore and above, with State/UT Police for amounts below ₹6 crore, matching the reference table.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2785,
+      "seconds": 1.75
+    },
+    {
+      "id": "fr10",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "The provided excerpts don't state a time limit for filing the Fraud Monitoring Return after a fraud is classified. They mention the FMR format only for reporting frauds of ₹1 crore and above to the SFIO.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "fraud_risk:4.1#2",
+        "fraud_risk:2.1#2",
+        "fraud_risk:7.2",
+        "fraud_risk:9.2",
+        "fraud_risk:5.1"
+      ],
+      "facts_ok": false,
+      "citation_hit": false,
+      "judge": "incorrect",
+      "judge_reason": "The reference explicitly states banks must furnish the FMR immediately, but not later than 14 days from the date of fraud classification; the answer wrongly claims the excerpts contain no time limit.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2793,
+      "seconds": 2.96
+    },
+    {
+      "id": "fr11",
+      "type": "answerable",
+      "kind": "multi",
+      "mode": "grounded",
+      "answer": "Banks may close, for limited statistical/reporting purposes, reported fraud cases involving up to ₹1 crore, provided staff accountability examination and any disciplinary action have been done. In addition, either (a) the investigation is ongoing or no charge-sheet has been filed for more than three years from the FIR date, or (b) a charge-sheet is filed but the trial has not started or has been pending for more than three years from the FIR date. Banks must keep details of such cases for auditors.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:6.4",
+          "quote": "close those reported fraud cases involving amount up to ₹1 crore , where examination of staff accountability and disciplinary action, if any, have been taken"
+        },
+        {
+          "chunk_id": "fraud_risk:6.4",
+          "quote": "The investigation is going on or charge-sheet has not been filed in the Court by LEA for more than three years from the date of registration of First Information Report (FIR)"
+        },
+        {
+          "chunk_id": "fraud_risk:6.4",
+          "quote": "the trial in the court has not commenced or is pending before the court for more than three years from the date of registration of FIR."
+        },
+        {
+          "chunk_id": "fraud_risk:6.4",
+          "quote": "banks shall maintain details of such cases for examination by auditors."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:6.4",
+        "fraud_risk:4.1#1",
+        "fraud_risk:5.1",
+        "fraud_risk:4.1#3",
+        "fraud_risk:7.1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states the ₹1 crore ceiling, the staff accountability/disciplinary precondition, and both three-year alternatives (investigation ongoing or no charge-sheet, and charge-sheet filed with trial not commenced or pending) measured from FIR registration; the extra note about keeping details for auditors is not in the reference but does not contradict it.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3176,
+      "seconds": 5.11
+    },
+    {
+      "id": "fr12",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "A commercial bank must subject title deeds and related title documents to periodic legal audit and re-verification, until the loan is fully repaid, for all credit facilities of ₹5 crore and above. The threshold is ₹1 crore for Small Finance Banks, Local Area Banks and Regional Rural Banks.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:8.1",
+          "quote": "Banks shall subject the title deeds and other related title documents in respect of all credit facilities of ₹5 crore and above to periodic legal audit and re-verification, till the loan is fully repaid."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:8.1",
+        "fraud_risk:4.1#1",
+        "fraud_risk:8.3",
+        "digital_lending:27",
+        "fraud_risk:3.3"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states the ₹5 crore threshold for commercial banks for periodic legal audit of title documents until full repayment, and correctly notes the ₹1 crore threshold for SFBs, LABs and RRBs.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2882,
+      "seconds": 5.83
+    },
+    {
+      "id": "fr13",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "For FMR reporting, the 'date of detection' is the actual date the fraud came to light in the concerned branch, audit or department. It is not the date the bank's competent authority approved it.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:8.4",
+          "quote": "The ‘date of detection’ to be reported in FMR is the actual date when the fraud came to light in the concerned branch / audit / department, as the case may be, and not the date of approval by the competent authority of the bank."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:8.4",
+        "fraud_risk:6.3#1",
+        "fraud_risk:4.1#2",
+        "fraud_risk:6.4",
+        "fraud_risk:3.1#1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states that the date of detection is the actual date the fraud came to light in the concerned branch/audit/department, and not the date of competent authority approval, matching the reference text.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3208,
+      "seconds": 2.36
+    },
+    {
+      "id": "fr14",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "Banks must report a robbery (including attempted cases) to the RBI's Fraud Monitoring Group immediately, and not later than seven days from its occurrence. They must also include it in the quarterly return (RBR) on theft, burglary, dacoity and robbery, submitted within 15 days from the end of the quarter.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:9.1",
+          "quote": "Banks shall report instances of theft, burglary, dacoity and robbery (including attempted cases), to Fraud Monitoring Group (FMG), Department of Supervision, Central Office, Reserve Bank of India, immediately (not later than seven days) from their occurrence."
+        },
+        {
+          "chunk_id": "fraud_risk:9.2",
+          "quote": "This shall be submitted within 15 days from the end of the quarter to which it relates."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:9.1",
+        "fraud_risk:9.2",
+        "customer_liability:5#2",
+        "fraud_risk:6.3#1",
+        "customer_liability:8"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states the core requirement from section 9.1: report robbery, including attempted cases, to the FMG immediately and not later than seven days from occurrence. The extra detail about a quarterly RBR return within 15 days is not in the provided reference text, but it doesn't contradict it and doesn't affect the answer to the question asked.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3098,
+      "seconds": 2.89
+    },
+    {
+      "id": "fr15",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "For forged instruments, including fake/forged instruments sent in clearing for truncated cheques, the paying bank reports the fraud, not the presenting bank. The presenting bank must immediately hand over the underlying instrument to the paying bank when demanded. The exception is where the instrument is genuine but paid to someone who isn't the true owner. The other exception is where the amount was credited before realisation and the instrument is later found fake/forged and returned. In those cases, the presenting bank that suffered the loss files the fraud report with RBI and informs the LEAs.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:7.1",
+          "quote": "reporting of frauds involving forged instruments, including fake / forged instruments sent in clearing in respect of truncated instruments, shall continue to be done by the paying banker and not by the presenting banker"
+        },
+        {
+          "chunk_id": "fraud_risk:7.1",
+          "quote": "the presenting bank shall immediately handover the underlying instrument to the drawee / paying bank, as and when demanded"
+        },
+        {
+          "chunk_id": "fraud_risk:7.2",
+          "quote": "the presenting bank which is defrauded or is put to loss by paying the amount before realisation of the instrument shall file the fraud report with the RBI"
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:7.1",
+        "fraud_risk:7.2",
+        "fraud_risk:6.1",
+        "fraud_risk:4.1#3",
+        "fraud_risk:6.3#1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that the paying bank reports forged-instrument frauds, not the presenting bank, and that the presenting bank must hand over the instrument on demand, matching clause 7.1. The two exceptions it adds are not in the excerpt, but they do not contradict it and the core answer is accurate.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3079,
+      "seconds": 3.62
+    },
+    {
+      "id": "fr16",
+      "type": "answerable",
+      "kind": "paraphrase",
+      "mode": "grounded",
+      "answer": "No. Banks must complete the investigation from the fraud angle before transferring a loan account to other lenders or ARCs. If they conclude a fraud has occurred, they must report it to RBI/NABARD before selling the account.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:8.2",
+          "quote": "Banks shall complete the investigation from fraud angle before transferring the loan account / credit facility to other lenders / ARCs."
+        },
+        {
+          "chunk_id": "fraud_risk:8.2",
+          "quote": "they shall report it to RBI / NABARD before selling the accounts to other lenders / ARCs"
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:8.2",
+        "fraud_risk:4.1#1",
+        "fraud_risk:4.1#3",
+        "fraud_risk:7.2",
+        "fraud_risk:4.1#2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly says no, banks must complete the fraud investigation before transferring the account to other lenders or ARCs, and accurately states the reporting-to-RBI/NABARD requirement before sale if fraud is concluded.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2779,
+      "seconds": 2.32
+    },
+    {
+      "id": "fr17",
+      "type": "answerable",
+      "kind": "numeric",
+      "mode": "grounded",
+      "answer": "Public sector banks (and AIFIs) must refer all fraud cases involving ₹3 crore and above to the ABBFF constituted by the CVC. The referral is for examining the role of all levels of officials / whole-time directors, including ex-officials / ex-WTDs.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:4.3",
+          "quote": "PSBs and AIFIs shall also refer all fraud cases of amount involving ₹3 crore and above for examining the role of all levels of officials / whole-time directors"
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:5.1",
+        "fraud_risk:4.3",
+        "fraud_risk:2.1#2",
+        "fraud_risk:6.3#1",
+        "fraud_risk:introduction"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states the ₹3 crore and above threshold for referral to the ABBFF constituted by the CVC, and accurately describes the purpose of examining the role of officials and WTDs including ex-officials.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3067,
+      "seconds": 2.4
+    },
+    {
+      "id": "fr18",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "Banks may withdraw an FMR or remove perpetrator name(s) from it only in exceptional circumstances, with due justification and the approval of an official at least in the rank of a whole-time director.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:6.3#2",
+          "quote": "Such withdrawal / removal shall, however, be made with due justification and with the approval of an official at least in the rank of a whole-time director."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:6.3#2",
+        "fraud_risk:5.1",
+        "fraud_risk:Appendix#2",
+        "fraud_risk:2.1#2",
+        "fraud_risk:6.1"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states that approval must come from an official at least in the rank of a whole-time director, along with the exceptional-circumstances and due-justification conditions from the reference.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 4569,
+      "seconds": 1.55
+    },
+    {
+      "id": "fr19",
+      "type": "answerable",
+      "kind": "multi",
+      "mode": "grounded",
+      "answer": "Yes. After a Resolution Plan under IBC (or RBI's prudential framework) is implemented, the Para 4.4 penal measures no longer apply to the entity or business enterprise. They continue to apply to the erstwhile promoter(s), director(s) or persons who were in charge of managing the entity's affairs. The bank must also examine whether the entity stays classified as fraud, and criminal action against the former promoters or directors can continue.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:4.5",
+          "quote": "The penal measures as detailed in Para 4.4 shall not be applicable to entities / business enterprises after implementation of the Resolution Plan under IBC or aforesaid prudential framework."
+        },
+        {
+          "chunk_id": "fraud_risk:4.5",
+          "quote": "The penal measures detailed in Para 4.4 shall continue to apply to the erstwhile promoter(s) / director(s) / persons who were in charge and responsible for the management of the affairs of the entity / business enterprise."
+        },
+        {
+          "chunk_id": "fraud_risk:4.5",
+          "quote": "the bank shall examine whether the entity shall continue to remain classified as fraud or the classification as fraud could be removed"
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:4.5",
+        "fraud_risk:4.4",
+        "fraud_risk:8.2",
+        "fraud_risk:4.1#1",
+        "fraud_risk:4.1#3"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer accurately states that Para 4.4 penal measures no longer apply to the entity after the IBC Resolution Plan implementation, while they continue for erstwhile promoters/directors/persons in charge, matching 4.5.2 and 4.5.3; the extra remarks about examining classification and criminal action are not contradicted by the reference shown, though they go slightly beyond it.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3050,
+      "seconds": 3.97
+    },
+    {
+      "id": "fr20",
+      "type": "answerable",
+      "kind": "lookup",
+      "mode": "grounded",
+      "answer": "The official responsible for monitoring and reporting of frauds must be of at least General Manager rank or equivalent.",
+      "refused": false,
+      "citations": [
+        {
+          "chunk_id": "fraud_risk:2.2",
+          "quote": "A senior official in the rank of at least a General Manager or equivalent shall be responsible for monitoring and reporting of frauds."
+        }
+      ],
+      "retrieved": [
+        "fraud_risk:2.2",
+        "fraud_risk:2.1#2",
+        "fraud_risk:5.1",
+        "fraud_risk:2.1#3",
+        "fraud_risk:5.2"
+      ],
+      "facts_ok": true,
+      "citation_hit": true,
+      "judge": "correct",
+      "judge_reason": "The answer correctly states the minimum rank as General Manager or equivalent, matching the reference text.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2569,
+      "seconds": 3.43
+    },
+    {
+      "id": "un01",
+      "type": "unanswerable",
+      "kind": "near-miss",
+      "mode": "grounded",
+      "answer": "The provided excerpts do not specify any maximum interest rate that a digital lender may charge.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "digital_lending:4#1",
+        "digital_lending:1#1",
+        "digital_lending:10",
+        "digital_lending:Annex II#2",
+        "digital_lending:26"
+      ],
+      "facts_ok": null,
+      "citation_hit": null,
+      "judge": "abstained",
+      "judge_reason": "The reference text says the documents do not cover this question, and the answer clearly states the provided excerpts do not specify any maximum interest rate for digital lenders.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2623,
+      "seconds": 1.18
+    },
+    {
+      "id": "un02",
+      "type": "unanswerable",
+      "kind": "off-topic",
+      "mode": "grounded",
+      "answer": "The provided excerpts don't cover KYC update frequency for high-risk customers. They only deal with limiting customer liability in unauthorised electronic banking transactions.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "customer_liability:4",
+        "customer_liability:preamble",
+        "customer_liability:7#2",
+        "customer_liability:5#2",
+        "customer_liability:5#1"
+      ],
+      "facts_ok": null,
+      "citation_hit": null,
+      "judge": "abstained",
+      "judge_reason": "The reference says the documents do not cover the question, and the answer clearly states the excerpts don't address KYC update frequency for high-risk customers.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2869,
+      "seconds": 1.85
+    },
+    {
+      "id": "un03",
+      "type": "unanswerable",
+      "kind": "near-miss",
+      "mode": "grounded",
+      "answer": "The provided excerpts don't say what the maximum compensation is that the RBI Ombudsman can award. They only cover customer liability limits and complaint resolution timelines for unauthorised electronic banking transactions.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "customer_liability:10",
+        "customer_liability:7#2",
+        "customer_liability:11",
+        "customer_liability:2",
+        "customer_liability:preamble"
+      ],
+      "facts_ok": null,
+      "citation_hit": null,
+      "judge": "abstained",
+      "judge_reason": "The reference says the documents do not cover the question, and the answer clearly states the excerpts don't specify the maximum compensation, so it abstains appropriately.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2708,
+      "seconds": 1.28
+    },
+    {
+      "id": "un04",
+      "type": "unanswerable",
+      "kind": "off-topic",
+      "mode": "grounded",
+      "answer": "The provided excerpts do not state any daily cash withdrawal limit at ATMs.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "customer_liability:7#2",
+        "customer_liability:Annex#2",
+        "customer_liability:5#2",
+        "customer_liability:8",
+        "digital_lending:9#2"
+      ],
+      "facts_ok": null,
+      "citation_hit": null,
+      "judge": "abstained",
+      "judge_reason": "The reference says the documents do not cover this question, and the answer clearly states the excerpts do not specify a daily ATM withdrawal limit.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3805,
+      "seconds": 1.97
+    },
+    {
+      "id": "un05",
+      "type": "unanswerable",
+      "kind": "near-miss",
+      "mode": "grounded",
+      "answer": "The documents don't specify any monetary penalty on a bank for late fraud reporting. They only say FMRs must be filed within 14 days of classification and that banks must examine and fix staff accountability for delays.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "fraud_risk:6.3#1",
+        "fraud_risk:6.1",
+        "fraud_risk:7.2",
+        "fraud_risk:1.3",
+        "fraud_risk:4.4"
+      ],
+      "facts_ok": null,
+      "citation_hit": null,
+      "judge": "abstained",
+      "judge_reason": "The reference says the documents do not cover the penalty question, and the answer clearly states the documents don't specify any monetary penalty for late fraud reporting, so it abstains appropriately.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2633,
+      "seconds": 1.39
+    },
+    {
+      "id": "un06",
+      "type": "unanswerable",
+      "kind": "near-miss",
+      "mode": "grounded",
+      "answer": "The excerpts don't specify any minimum credit score for a digital loan. They only say regulated entities must collect the borrower's economic profile (at minimum age, occupation and income) to assess creditworthiness.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "digital_lending:7",
+        "digital_lending:4#2",
+        "digital_lending:4#1",
+        "digital_lending:19#1",
+        "digital_lending:19#2"
+      ],
+      "facts_ok": null,
+      "citation_hit": null,
+      "judge": "abstained",
+      "judge_reason": "The reference says the documents do not cover the question, and the answer clearly states the excerpts don't specify a minimum credit score, so it abstains rather than giving a substantive figure.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2577,
+      "seconds": 2.26
+    },
+    {
+      "id": "un07",
+      "type": "unanswerable",
+      "kind": "near-miss",
+      "mode": "grounded",
+      "answer": "The documents don't specify a maximum loan amount that a digital lending app can offer. They only cap DLG cover at five per cent of the amount disbursed, which is a different matter.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "digital_lending:6#1",
+        "digital_lending:Annex II#2",
+        "digital_lending:23",
+        "digital_lending:4#2",
+        "digital_lending:4#1"
+      ],
+      "facts_ok": null,
+      "citation_hit": null,
+      "judge": "abstained",
+      "judge_reason": "The reference says the documents don't cover this question, and the answer clearly states the documents don't specify a maximum loan amount, without giving a substantive figure.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2771,
+      "seconds": 1.33
+    },
+    {
+      "id": "un08",
+      "type": "unanswerable",
+      "kind": "off-topic",
+      "mode": "grounded",
+      "answer": "The provided excerpts don't cover how long banks must keep CCTV footage from ATMs.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "customer_liability:7#2",
+        "customer_liability:5#2",
+        "customer_liability:4",
+        "customer_liability:5#1",
+        "customer_liability:preamble"
+      ],
+      "facts_ok": null,
+      "citation_hit": null,
+      "judge": "abstained",
+      "judge_reason": "The reference text says the documents do not cover this question, and the answer clearly states the excerpts don't specify the CCTV retention period.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2846,
+      "seconds": 1.95
+    },
+    {
+      "id": "un09",
+      "type": "unanswerable",
+      "kind": "off-topic",
+      "mode": "grounded",
+      "answer": "The provided excerpts don't cover DICGC deposit insurance, so I can't say how much of your deposit is insured.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "customer_liability:10",
+        "customer_liability:9",
+        "customer_liability:7#2",
+        "customer_liability:Annex#2",
+        "digital_lending:22"
+      ],
+      "facts_ok": null,
+      "citation_hit": null,
+      "judge": "abstained",
+      "judge_reason": "The reference says the documents do not cover the question, and the answer clearly states the excerpts don't cover DICGC deposit insurance and declines to give a figure.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 3245,
+      "seconds": 1.28
+    },
+    {
+      "id": "un10",
+      "type": "unanswerable",
+      "kind": "off-topic",
+      "mode": "grounded",
+      "answer": "The provided excerpts don't cover the current repo rate set by the RBI.",
+      "refused": true,
+      "citations": [],
+      "retrieved": [
+        "fraud_risk:9.2",
+        "digital_lending:preamble",
+        "digital_lending:17#2",
+        "digital_lending:17#1",
+        "customer_liability:7#2"
+      ],
+      "facts_ok": null,
+      "citation_hit": null,
+      "judge": "abstained",
+      "judge_reason": "The reference says the documents do not cover the repo rate, and the answer clearly states the excerpts don't cover it, so it correctly abstains.",
+      "verified": true,
+      "attempts": 1,
+      "problems": [],
+      "tokens": 2509,
+      "seconds": 1.78
+    }
+  ],
+  "minutes": 4.7
+}
